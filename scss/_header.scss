@@ -1,11 +1,51 @@
 .header {
-    // position: fixed;
-    // z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
     min-height: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: transparent;
+    color: #ffffff;
+    svg {
+        display: block;
+        fill: #ffffff;
+    }
+    svg:hover {
+        fill: $color-pink-hover;
+    }
+    .cart {
+        fill: #ffffff;
+        stroke: #ffffff;
+        &:hover {
+            stroke: $color-pink-hover;
+        }
+    }
+}
+.header-black {
+    color: $color-black;
+    svg {
+        fill: $color-black;
+    }
+    .cart {
+        fill: $color-black;
+        stroke: $color-black;
+    }
+    .header-language {
+        button {
+            color: $color-black;
+            svg {
+                fill: $color-black;
+            }
+        }
+    }
+}
+.header-visible {
+    background-color: #fff;
+    box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.03);
 }
 .header nav {
     display: flex;
@@ -38,20 +78,28 @@
 }
 
 .header-language {
-    display: flex;
-    align-items: center;
-    a {
+    button {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: transparent;
         margin-right: 9px;
         text-transform: uppercase;
         font-family: $font-poppins;
         font-weight: 600;
         font-size: 16px;
         line-height: 140%;
+        color: #ffffff;
+        cursor: pointer;
+        &:hover {
+            color: $color-pink-hover;
+        }
     }
-    span {
-        width: 6px;
-        height: 4px;
-        background-image: url(/src/header/arrow.svg);
-        background-repeat: no-repeat;
+    button:hover > svg {
+        fill: $color-pink-hover;
+    }
+    svg {
+        margin-left: 9px;
+        fill: #ffffff;
     }
 }

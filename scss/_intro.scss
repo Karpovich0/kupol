@@ -5,7 +5,9 @@
         margin-bottom: 24px;
         text-align: left;
     }
-
+    svg {
+        fill: #ffffff;
+    }
     .swiper-slide {
         position: relative;
         min-height: 730px;
@@ -71,17 +73,29 @@
         top: 50%;
         width: 64px;
         height: 64px;
-        transform: translate(0, -50%);
-        background-repeat: no-repeat;
+        transform: translateY(-50%);
         border: none;
         cursor: pointer;
+        background-color: transparent;
+        transform-origin: center;
+        & {
+            svg {
+                fill: #ffffff;
+            }
+        }
+    }
+    .swiper-arrow {
+        svg {
+            fill: $color-black;
+        }
     }
     .swiper-prev {
         left: 125px;
-        background: url("/src/intro/arrow-left.svg");
     }
     .swiper-next {
         right: 125px;
-        background: url("/src/intro/arrow-right.svg");
+        svg {
+            transform: rotate(180deg);
+        }
     }
 }

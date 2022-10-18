@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #141414;
   font-family: "Inter", sans-serif;
@@ -159,6 +163,11 @@ section h2 {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
   min-height: 70px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -174,6 +183,52 @@ section h2 {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: transparent;
+  color: #ffffff;
+}
+
+.header svg {
+  display: block;
+  fill: #ffffff;
+}
+
+.header svg:hover {
+  fill: #ff7272;
+}
+
+.header .cart {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.header .cart:hover {
+  stroke: #ff7272;
+}
+
+.header-black {
+  color: #141414;
+}
+
+.header-black svg {
+  fill: #141414;
+}
+
+.header-black .cart {
+  fill: #141414;
+  stroke: #141414;
+}
+
+.header-black .header-language button {
+  color: #141414;
+}
+
+.header-black .header-language button svg {
+  fill: #141414;
+}
+
+.header-visible {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.03);
 }
 
 .header nav {
@@ -232,7 +287,7 @@ section h2 {
   margin-right: 0;
 }
 
-.header-language {
+.header-language button {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -241,22 +296,29 @@ section h2 {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.header-language a {
+  border: none;
+  background-color: transparent;
   margin-right: 9px;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 140%;
+  color: #ffffff;
+  cursor: pointer;
 }
 
-.header-language span {
-  width: 6px;
-  height: 4px;
-  background-image: url(/src/header/arrow.svg);
-  background-repeat: no-repeat;
+.header-language button:hover {
+  color: #ff7272;
+}
+
+.header-language button:hover > svg {
+  fill: #ff7272;
+}
+
+.header-language svg {
+  margin-left: 9px;
+  fill: #ffffff;
 }
 
 .intro {
@@ -267,6 +329,10 @@ section h2 {
   color: #ffffff;
   margin-bottom: 24px;
   text-align: left;
+}
+
+.intro svg {
+  fill: #ffffff;
 }
 
 .intro .swiper-slide {
@@ -377,22 +443,37 @@ section h2 {
   top: 50%;
   width: 64px;
   height: 64px;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   border: none;
   cursor: pointer;
+  background-color: transparent;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+}
+
+.intro button svg {
+  fill: #ffffff;
+}
+
+.intro .swiper-arrow svg {
+  fill: #141414;
 }
 
 .intro .swiper-prev {
   left: 125px;
-  background: url("/src/intro/arrow-left.svg");
 }
 
 .intro .swiper-next {
   right: 125px;
-  background: url("/src/intro/arrow-right.svg");
+}
+
+.intro .swiper-next svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .chargers > ul {
@@ -562,6 +643,7 @@ section h2 {
 }
 
 .footer {
+  position: relative;
   padding: 62px 0 54px;
   color: #ffffff;
   background-color: #141414;
@@ -664,4 +746,52 @@ section h2 {
   -webkit-column-gap: 95px;
      -moz-column-gap: 95px;
           column-gap: 95px;
+}
+
+.footer > button {
+  position: absolute;
+  top: 10px;
+  right: 20%;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ec5959;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 1920px) {
+  .footer > button {
+    right: 3%;
+  }
+}
+
+.footer > button svg {
+  fill: #ec5959;
+}
+
+.footer > button:hover {
+  border-color: #ff7272;
+  background-color: #ff7272;
+}
+
+.footer > button:hover svg {
+  fill: #ffffff;
+}
+
+.footer > button:active {
+  border-color: #bd4747;
+  background-color: #bd4747;
 }
