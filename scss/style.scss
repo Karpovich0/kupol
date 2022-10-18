@@ -1,0 +1,90 @@
+$color-black: #141414;
+$color-pink-normal: #ec5959;
+$color-pink-hover: #ff7272;
+$color-pink-active: #bd4747;
+$color-disabled: rgba(20, 20, 20, 0.2);
+$font-inter: "Inter", sans-serif;
+$font-poppins: "Poppins", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+$font-rubik-one: "Rubik One", sans-serif;
+body {
+    color: $color-black;
+    font-family: $font-inter;
+    font-style: normal;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+}
+section {
+    margin-bottom: 100px;
+}
+section h2 {
+    margin-bottom: 50px;
+    font-family: $font-rubik-one;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.image-link {
+    transition: transform 0.2s ease, border 0.2s ease;
+    &:hover {
+        transform: scale(1.2);
+        border: 2px solid $color-pink-normal;
+    }
+}
+.button {
+    align-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 211px;
+    min-height: 56px;
+    background: $color-pink-normal;
+    // font
+    font-family: $font-rubik-one;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.paragraph {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+.content {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+.icon-link {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    img {
+        margin-right: 4px;
+    }
+}
+@import "header";
+@import "intro";
+@import "chargers";
+@import "testing";
+@import "restore";
+@import "fields";
+@import "advantages";
+@import "allowed";
+@import "footer";

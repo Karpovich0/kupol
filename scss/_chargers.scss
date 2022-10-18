@@ -1,0 +1,50 @@
+.chargers {
+    & > ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 20px;
+    }
+    & ul img {
+        margin-bottom: 24px;
+    }
+    & ul ul li {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        a {
+            padding-bottom: 3px;
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            border-bottom: 2px solid $color-black;
+            &::after {
+                content: "";
+                display: block;
+                height: 36px;
+                width: 36px;
+                background: url(/src/chargers/arrow.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-color: $color-pink-normal;
+            }
+        }
+        a:hover::after {
+            background-color: $color-pink-hover;
+        }
+        p {
+            margin-bottom: 3px;
+            grid-column: 1/-1;
+            text-transform: uppercase;
+        }
+        span {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+    & ul ul li:last-child {
+        a {
+            border-bottom: none;
+        }
+    }
+}

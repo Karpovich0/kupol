@@ -1,0 +1,18 @@
+.advantages {
+    margin-bottom: 100px;
+    padding: 0 82px;
+    display: flex;
+    justify-content: space-between;
+    img {
+        margin-bottom: 16px;
+    }
+    li {
+        width: 100%;
+        max-width: 132px;
+        text-align: center;
+        // font
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
