@@ -1,9 +1,11 @@
 .intro {
     position: relative;
     h2 {
+        color: #ffffff;
         margin-bottom: 24px;
         text-align: left;
     }
+
     .swiper-slide {
         position: relative;
         min-height: 730px;
@@ -28,8 +30,12 @@
         div {
             display: flex;
             flex-direction: column;
+            .black-text {
+                color: $color-black;
+            }
         }
         p {
+            color: #ffffff;
             width: 100%;
             max-width: 549px;
             margin-bottom: 36px;
@@ -37,11 +43,30 @@
             font-size: 24px;
             line-height: 30px;
         }
+        .position-right {
+            grid-column: 2/-1;
+            max-width: 360px;
+            justify-self: end;
+        }
+        .full-width {
+            grid-column: 1/-1;
+            align-items: center;
+            h2,
+            p {
+                text-align: center;
+                width: 100%;
+                max-width: 629px;
+            }
+            .button {
+                align-self: center;
+            }
+        }
         .button {
             align-self: start;
         }
     }
     button {
+        z-index: 10;
         position: absolute;
         top: 50%;
         width: 64px;
@@ -49,6 +74,7 @@
         transform: translate(0, -50%);
         background-repeat: no-repeat;
         border: none;
+        cursor: pointer;
     }
     .swiper-prev {
         left: 125px;

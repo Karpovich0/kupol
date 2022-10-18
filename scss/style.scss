@@ -79,6 +79,34 @@ section h2 {
         margin-right: 4px;
     }
 }
+
+.swiper-pagination-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+}
+.swiper-pagination-bullet {
+    margin: 6px 0;
+    display: block;
+    padding: 0;
+    width: 50px;
+    height: 8px;
+    border-radius: 0;
+    cursor: pointer;
+    background-color: rgba($color: #fff, $alpha: 0.4);
+    transition: opacity 0.3s ease;
+    &-active {
+        background-color: $color-pink-normal;
+    }
+    &:hover:not(&-active) {
+        opacity: 1;
+    }
+}
+
 @import "header";
 @import "intro";
 @import "chargers";

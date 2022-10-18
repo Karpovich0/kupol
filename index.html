@@ -10,6 +10,8 @@
 		<link rel="stylesheet" href="/fonts/poppins/poppins.css" />
 		<link rel="stylesheet" href="/fonts/roboto/roboto.css" />
 		<link rel="stylesheet" href="/fonts/rubik-one/rubik-one.css" />
+		<!-- swiper -->
+		<link rel="stylesheet" href="/css/swiper-bundle.min.css" />
 		<!-- styles -->
 		<link rel="stylesheet" href="/css/normalize.css" />
 		<link rel="stylesheet" href="/css/drop-default-styles.css" />
@@ -57,25 +59,56 @@
 			</nav>
 		</header>
 		<main>
-			<section class="intro swiper-container">
+			<section class="intro swiper">
 				<ul class="swiper-wrapper">
 					<li class="swiper-slide">
 						<div class="container">
 							<div>
-								<h2>профессиональные зарядные устройства</h2>
-								<p>Заряд аккумуляторов от 6 В до 72 В емкостью от 10 А/ч до 1000 А/ч</p>
+								<h2 class="black-text">профессиональные зарядные устройства</h2>
+								<p class="black-text">
+									Заряд аккумуляторов от 6 В до 72 В емкостью от 10 А/ч до 1000 А/ч
+								</p>
 								<a href="" class="button">подробнее</a>
 							</div>
 						</div>
 						<img src="/src/intro/1.jpg" alt="" />
 					</li>
-					<!-- <li class="swiper-slide"></li>
-					<li class="swiper-slide"></li>
-					<li class="swiper-slide"></li> -->
+					<li class="swiper-slide">
+						<div class="container">
+							<div class="position-right">
+								<h2>Полноценное тестирование вашего аккумулятора</h2>
+								<p>тестирование аккумуляторов от 6 В до 60 В емкостью от 10 а/ч до 650 а/ч</p>
+								<a href="" class="button">подробнее</a>
+							</div>
+						</div>
+						<img src="/src/intro/2.jpg" alt="" />
+					</li>
+					<li class="swiper-slide">
+						<div class="container">
+							<div>
+								<h2>Работа в экстремальных условиях</h2>
+								<p>Будьте уверенны в качестве вашего зарядного устройства</p>
+								<a href="" class="button">подробнее</a>
+							</div>
+						</div>
+						<img src="/src/intro/3.jpg" alt="" />
+					</li>
+					<li class="swiper-slide">
+						<div class="container">
+							<div class="full-width">
+								<h2>идеальное дополнение к зеленой энергетике</h2>
+								<p>Будьте уверенны в качестве вашего зарядного устройства</p>
+								<a href="" class="button">подробнее</a>
+							</div>
+						</div>
+						<img src="/src/intro/4.jpg" alt="" />
+					</li>
 				</ul>
 				<button class="swiper-prev" type="button"></button>
 				<button class="swiper-next" type="button"></button>
-				<div class="swiper-pagination"></div>
+				<div class="swiper-pagination-wrapper">
+					<div class="swiper-pagination"></div>
+				</div>
 			</section>
 			<section class="chargers container">
 				<h2>зарядные устройства для аккумуляторов</h2>
@@ -320,5 +353,9 @@
 				</nav>
 			</div>
 		</footer>
+		<!-- JavaScript -->
+		<script src="/js/script.js"></script>
+		<script src="/js/swiper-bundle.min.js"></script>
+		<script src="/js/swiper.js" type="module"></script>
 	</body>
 </html>
