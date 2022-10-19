@@ -146,6 +146,11 @@ section h2 {
         opacity: 1;
     }
 }
+.body-burger {
+    @media (max-width: $width-pc) {
+        overflow: hidden;
+    }
+}
 
 @import "header";
 @import "intro";

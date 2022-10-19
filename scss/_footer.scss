@@ -134,6 +134,7 @@
         margin-top: 54px;
         display: flex;
         column-gap: 62px;
+        grid-column: 2/-1;
         @media (max-width: $width-pc) {
             column-gap: 95px;
             margin-top: 36px;

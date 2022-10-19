@@ -145,26 +145,10 @@
 				/>
 				<path d="M78.6117 14.9013V0.848633H74.8342V18.6486H89V14.9013H78.6117Z" />
 			</symbol>
-			<symbol id="burger">
-				<g clip-path="url(#clip0_975_8056)">
-					<path d="M2.05994 2H25.9398" stroke-width="3" stroke-linecap="round" />
-					<path d="M2.05994 11H25.9398" stroke-width="3" stroke-linecap="round" />
-					<path d="M2.05994 20H25.9398" stroke-width="3" stroke-linecap="round" />
-				</g>
-				<defs>
-					<clipPath id="clip0_975_8056">
-						<rect width="26.88" height="21" fill="white" transform="translate(0.560059 0.5)" />
-					</clipPath>
-				</defs>
-			</symbol>
 		</svg>
 		<header class="header">
 			<nav class="container">
-				<button>
-					<svg width="27" height="21">
-						<use xlink:href="#burger"></use>
-					</svg>
-				</button>
+				<button type="button" class="burger"><span></span></button>
 				<a href="index.html" class="logo">
 					<svg width="171" height="42">
 						<use xlink:href="#logo"></use>
@@ -215,10 +199,11 @@
 						</svg>
 					</button>
 				</div>
-				<a href="">
+				<a href="" class="cart">
 					<svg class="cart" width="24" height="24">
 						<use xlink:href="#cart"></use>
 					</svg>
+					<span>корзина</span>
 				</a>
 			</nav>
 		</header>
