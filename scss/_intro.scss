@@ -4,6 +4,9 @@
         color: #ffffff;
         margin-bottom: 24px;
         text-align: left;
+        @media (max-width: $width-pc) {
+            margin-bottom: 16px;
+        }
     }
     svg {
         fill: #ffffff;
@@ -44,6 +47,12 @@
             font-weight: 500;
             font-size: 24px;
             line-height: 30px;
+            @media (max-width: $width-pc) {
+                margin-bottom: 24px;
+                max-width: 340px;
+                font-size: 16px;
+                line-height: 24px;
+            }
         }
         .position-right {
             grid-column: 2/-1;
@@ -96,6 +105,12 @@
         right: 125px;
         svg {
             transform: rotate(180deg);
+        }
+    }
+    @media (max-width: $width-pc) {
+        .swiper-prev,
+        .swiper-next {
+            display: none;
         }
     }
 }

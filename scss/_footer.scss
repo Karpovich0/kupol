@@ -7,6 +7,9 @@
         display: grid;
         grid-template-columns: max-content 1fr;
         column-gap: 95px;
+        @media (max-width: $width-pc) {
+            column-gap: 62px;
+        }
     }
     p {
         padding-right: 20px;
@@ -22,8 +25,18 @@
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid #727272;
+        @media (max-width: $width-pc) {
+            padding-bottom: 34px;
+            justify-content: start;
+        }
         & > * {
             display: flex;
+            align-items: center;
+        }
+        & > p {
+            @media (max-width: $width-pc) {
+                display: none;
+            }
         }
         & > *::after {
             content: "";
@@ -36,6 +49,11 @@
             content: none;
         }
     }
+    .contact-list {
+        @media (max-width: $width-pc) {
+            margin-left: 25px;
+        }
+    }
     .contact-list li {
         margin-right: 24px;
         display: flex;
@@ -45,6 +63,9 @@
         border-radius: 50%;
         width: 44px;
         height: 44px;
+        &:last-child {
+            margin-right: 0;
+        }
     }
     .footer-social {
         div {
@@ -52,12 +73,20 @@
             display: flex;
             flex-direction: column;
             row-gap: 2px;
+            @media (max-width: $width-pc) {
+                margin-right: 25px;
+            }
         }
     }
     nav > ul {
         margin-top: 54px;
         display: flex;
         column-gap: 95px;
+        @media (max-width: $width-pc) {
+            margin-top: 36px;
+            column-gap: 20px;
+            justify-content: space-between;
+        }
     }
     & > button {
         position: absolute;

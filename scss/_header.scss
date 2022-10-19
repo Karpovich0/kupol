@@ -10,6 +10,10 @@
     justify-content: center;
     background-color: transparent;
     color: #ffffff;
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
     svg {
         display: block;
         fill: #ffffff;
@@ -22,6 +26,47 @@
         stroke: #ffffff;
         &:hover {
             stroke: $color-pink-hover;
+        }
+    }
+    .logo {
+        & svg:first-child {
+            display: block;
+        }
+        & svg:nth-child(2) {
+            display: none;
+        }
+        @media (max-width: $width-pc) {
+            & svg:first-child {
+                display: none;
+            }
+            & svg:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+    .pages-list,
+    .contact-list {
+        @media (max-width: $width-pc) {
+            display: none;
+        }
+    }
+    .icon-link {
+        @media (max-width: $width-pc) {
+            order: -1;
+        }
+    }
+    & nav > button {
+        display: none;
+    }
+    @media (max-width: $width-pc) {
+        & nav > button {
+            display: block;
+            order: -2;
+            border: none;
+            background-color: transparent;
+            svg {
+                stroke: #ffffff;
+            }
         }
     }
 }
@@ -40,6 +85,11 @@
             svg {
                 fill: $color-black;
             }
+        }
+    }
+    & nav > button {
+        svg {
+            stroke: $color-black;
         }
     }
 }
@@ -78,6 +128,9 @@
 }
 
 .header-language {
+    @media (max-width: $width-pc) {
+        justify-self: end;
+    }
     button {
         display: flex;
         align-items: center;
