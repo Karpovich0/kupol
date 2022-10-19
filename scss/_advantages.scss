@@ -1,21 +1,33 @@
 .advantages {
-    margin-bottom: 100px;
-    padding: 0 82px;
+    margin-bottom: 105px;
+    padding: 0 72px;
     display: flex;
     justify-content: space-between;
     @media (max-width: $width-pc) {
         margin-bottom: 50px;
+        padding: 0 160px;
     }
     img {
-        margin-bottom: 16px;
+        margin-bottom: 25px;
+        @media (max-width: $width-pc) {
+            margin-bottom: 17px;
+        }
     }
     li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        max-width: 132px;
+        max-width: 200px;
         text-align: center;
         // font
         font-weight: 600;
         font-size: 16px;
         line-height: 22px;
+        @media (min-width: $width-pc-start) {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
 }

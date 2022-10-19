@@ -2,12 +2,18 @@
     padding: 100px 0;
     background-color: #f3f3f4;
     @media (max-width: $width-pc) {
-        padding: 50px 0;
+        padding: 50px 0 40px;
     }
     h2 {
         text-align: left;
+        @media (max-width: $width-pc) {
+            text-align: center;
+        }
     }
     .content {
+        @media (min-width: $width-pc-start) {
+            align-items: center;
+        }
         @media (max-width: $width-pc) {
             grid-template-columns: 1fr;
         }
@@ -18,6 +24,12 @@
     @media (max-width: $width-pc) {
         & img {
             margin: 0 auto;
+        }
+    }
+    p {
+        @media (max-width: $width-pc) {
+            font-size: 16px;
+            line-height: 24px;
         }
     }
 }

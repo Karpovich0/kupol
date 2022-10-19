@@ -10,9 +10,18 @@
     justify-content: center;
     background-color: transparent;
     color: #ffffff;
+    @media (max-width: $width-pc) {
+        min-height: 50px;
+    }
     nav {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: max-content 1fr max-content max-content max-content max-content;
+        align-items: center;
+        grid-column-gap: 7px;
+        @media (max-width: $width-pc) {
+            grid-column-gap: 19px;
+            grid-template-columns: max-content 1fr 1fr 1fr max-content;
+        }
     }
     svg {
         display: block;
@@ -36,6 +45,7 @@
             display: none;
         }
         @media (max-width: $width-pc) {
+            margin: 0 auto;
             & svg:first-child {
                 display: none;
             }
@@ -50,9 +60,26 @@
             display: none;
         }
     }
+    .contact-list {
+        @media (min-width: $width-pc-start) {
+            margin-right: 17px;
+            li {
+                margin-right: 19px;
+            }
+        }
+    }
+    .pages-list {
+        @media (min-width: $width-pc-start) {
+            padding-left: 32px;
+            justify-content: center;
+        }
+    }
     .icon-link {
         @media (max-width: $width-pc) {
             order: -1;
+        }
+        @media (min-width: $width-pc-start) {
+            margin-right: 24px;
         }
     }
     & nav > button {
@@ -96,11 +123,6 @@
 .header-visible {
     background-color: #fff;
     box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.03);
-}
-.header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .header nav ul {

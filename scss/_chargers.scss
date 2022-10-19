@@ -1,11 +1,16 @@
 .chargers {
+    margin-bottom: 73px;
+    @media (max-width: $width-pc) {
+        margin-bottom: 34px;
+    }
     & > ul {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 20px;
         @media (max-width: $width-pc) {
+            padding: 0 50px;
             grid-template-columns: repeat(2, 1fr);
-            grid-row-gap: 36px;
+            grid-row-gap: 17px;
         }
     }
     & ul img {
@@ -20,7 +25,8 @@
         font-size: 20px;
         line-height: 30px;
         a {
-            padding-bottom: 3px;
+            margin-bottom: 13px;
+            padding-bottom: 4px;
             margin-top: 16px;
             display: grid;
             grid-template-columns: 1fr auto;

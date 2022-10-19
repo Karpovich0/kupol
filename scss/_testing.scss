@@ -9,7 +9,17 @@
         height: 100%;
         object-fit: cover;
         @media (max-width: $width-pc) {
-            margin-bottom: 24px;
+            display: block;
+        }
+    }
+    img + div {
+        @media (max-width: $width-pc) {
+            margin-top: 24px;
+        }
+    }
+    img + div > div {
+        @media (max-width: $width-pc) {
+            margin-bottom: 20px;
         }
     }
     .button {

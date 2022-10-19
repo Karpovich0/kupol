@@ -26,12 +26,28 @@
             object-fit: cover;
             transform: translate(-50%, -50%);
         }
+        @media (max-width: $width-pc) {
+            min-height: 500px;
+        }
     }
+
+    .swiper-pagination {
+        bottom: 24px;
+        display: flex;
+        justify-content: center;
+    }
+
     .container {
         position: relative;
         z-index: 10;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        @media (max-width: $width-pc) {
+            transform: translateY(-10px);
+        }
+        @media (min-width: $width-pc-start) {
+            transform: translateY(10px);
+        }
         div {
             display: flex;
             flex-direction: column;
@@ -58,6 +74,9 @@
             grid-column: 2/-1;
             max-width: 360px;
             justify-self: end;
+            @media (max-width: $width-pc) {
+                max-width: 280px;
+            }
         }
         .full-width {
             grid-column: 1/-1;

@@ -1,24 +1,46 @@
 .footer {
     position: relative;
-    padding: 62px 0 54px;
+    padding: 60px 0 54px;
     color: #ffffff;
     background-color: $color-black;
+    @media (max-width: 1920px) {
+        position: static;
+    }
     .container {
+    }
+    nav {
         display: grid;
         grid-template-columns: max-content 1fr;
-        column-gap: 95px;
+        column-gap: 105px;
+        .pages-list {
+            grid-column: 2/-1;
+        }
+        @media (max-width: 1920px) {
+            position: relative;
+        }
         @media (max-width: $width-pc) {
             column-gap: 62px;
+            .pages-list {
+                padding: 0 55px 0 85px;
+                grid-column: 1/-1;
+            }
+        }
+        & > a img {
+            transform: translate(9px, -7px);
+            @media (max-width: $width-pc) {
+                padding-top: 8px;
+                transform: translate(0, 0);
+            }
         }
     }
     p {
-        padding-right: 20px;
         width: 100%;
         max-width: 213px;
         font-family: $font-rubik-one;
         font-weight: 400;
         font-size: 16px;
         line-height: 140%;
+        text-transform: uppercase;
     }
     nav > div {
         padding-bottom: 44px;
@@ -75,20 +97,25 @@
             row-gap: 2px;
             @media (max-width: $width-pc) {
                 margin-right: 25px;
+                font-size: 14px;
+                img {
+                    margin-right: 10px;
+                }
             }
         }
     }
     nav > ul {
         margin-top: 54px;
         display: flex;
-        column-gap: 95px;
+        column-gap: 62px;
         @media (max-width: $width-pc) {
+            column-gap: 95px;
             margin-top: 36px;
             column-gap: 20px;
             justify-content: space-between;
         }
     }
-    & > button {
+    & nav > button {
         position: absolute;
         top: 10px;
         right: 20%;
@@ -102,7 +129,8 @@
         background-color: transparent;
         cursor: pointer;
         @media (max-width: 1920px) {
-            right: 3%;
+            top: -52px;
+            right: -10px;
         }
         svg {
             fill: $color-pink-normal;

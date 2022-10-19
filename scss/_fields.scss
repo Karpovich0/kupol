@@ -2,11 +2,14 @@
     ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 36px 20px;
+        @media (min-width: $width-pc-start) {
+            gap: 43px 20px;
+        }
+        gap: 29px 20px;
     }
     img {
         width: 100%;
-        margin-bottom: 24px;
+        margin-bottom: 17px;
     }
     p {
         font-weight: 400;
