@@ -38,11 +38,11 @@
         }
     }
     .logo {
+        & svg {
+            display: none;
+        }
         & svg:first-child {
             display: block;
-        }
-        & svg:nth-child(2) {
-            display: none;
         }
         @media (max-width: $width-pc) {
             margin: 0 auto;
@@ -50,6 +50,14 @@
                 display: none;
             }
             & svg:nth-child(2) {
+                display: block;
+            }
+        }
+        @media (max-width: $width-mobile) {
+            & svg:nth-child(2) {
+                display: none;
+            }
+            & svg:nth-child(3) {
                 display: block;
             }
         }
@@ -80,6 +88,14 @@
         }
         @media (min-width: $width-pc-start) {
             margin-right: 24px;
+        }
+        @media (max-width: $width-mobile) {
+            img {
+                margin-right: 20px;
+            }
+            & > span {
+                display: none;
+            }
         }
     }
     & nav > button {
@@ -166,6 +182,10 @@
         line-height: 140%;
         color: #ffffff;
         cursor: pointer;
+        @media (max-width: $width-mobile) {
+            padding: 0;
+            margin-right: 0;
+        }
         &:hover {
             color: $color-pink-hover;
         }

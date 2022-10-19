@@ -7,6 +7,10 @@
         @media (max-width: $width-pc) {
             margin-bottom: 16px;
         }
+        @media (max-width: $width-mobile) {
+            max-width: 629px;
+            text-align: center;
+        }
     }
     svg {
         fill: #ffffff;
@@ -29,6 +33,9 @@
         @media (max-width: $width-pc) {
             min-height: 500px;
         }
+        @media (max-width: $width-mobile) {
+            min-height: 450px;
+        }
     }
 
     .swiper-pagination {
@@ -48,11 +55,17 @@
         @media (min-width: $width-pc-start) {
             transform: translateY(10px);
         }
+        @media (max-width: $width-mobile) {
+            grid-template-columns: 1fr;
+        }
         div {
             display: flex;
             flex-direction: column;
             .black-text {
                 color: $color-black;
+            }
+            @media (max-width: $width-mobile) {
+                align-items: center;
             }
         }
         p {
@@ -69,6 +82,9 @@
                 font-size: 16px;
                 line-height: 24px;
             }
+            @media (max-width: $width-mobile) {
+                text-align: center;
+            }
         }
         .position-right {
             grid-column: 2/-1;
@@ -76,6 +92,11 @@
             justify-self: end;
             @media (max-width: $width-pc) {
                 max-width: 280px;
+            }
+            @media (max-width: $width-mobile) {
+                grid-column: 1/-1;
+                justify-self: center;
+                max-width: 340px;
             }
         }
         .full-width {
@@ -93,6 +114,9 @@
         }
         .button {
             align-self: start;
+            @media (max-width: $width-mobile) {
+                margin: 0 auto;
+            }
         }
     }
     button {
@@ -126,7 +150,7 @@
             transform: rotate(180deg);
         }
     }
-    @media (max-width: $width-pc) {
+    @media (max-width: 1919px) {
         .swiper-prev,
         .swiper-next {
             display: none;

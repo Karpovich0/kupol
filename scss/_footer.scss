@@ -6,30 +6,41 @@
     @media (max-width: 1920px) {
         position: static;
     }
-    .container {
+    @media (max-width: $width-mobile) {
+        padding: 28px 0 36px;
     }
     nav {
         display: grid;
         grid-template-columns: max-content 1fr;
         column-gap: 105px;
         .pages-list {
-            grid-column: 2/-1;
+            @media (max-width: $width-mobile) {
+                flex-direction: column;
+            }
         }
         @media (max-width: 1920px) {
             position: relative;
         }
         @media (max-width: $width-pc) {
-            column-gap: 62px;
+            column-gap: 50px;
             .pages-list {
                 padding: 0 55px 0 85px;
                 grid-column: 1/-1;
             }
+        }
+        @media (max-width: $width-mobile) {
+            grid-template-columns: 1fr;
+            row-gap: 24px;
+            align-items: center;
         }
         & > a img {
             transform: translate(9px, -7px);
             @media (max-width: $width-pc) {
                 padding-top: 8px;
                 transform: translate(0, 0);
+            }
+            @media (max-width: $width-mobile) {
+                margin: 0 auto;
             }
         }
     }
@@ -50,6 +61,12 @@
         @media (max-width: $width-pc) {
             padding-bottom: 34px;
             justify-content: start;
+        }
+        @media (max-width: $width-mobile) {
+            padding-bottom: 24px;
+            flex-direction: column;
+            row-gap: 24px;
+            align-items: center;
         }
         & > * {
             display: flex;
@@ -75,16 +92,22 @@
         @media (max-width: $width-pc) {
             margin-left: 25px;
         }
+        @media (max-width: $width-mobile) {
+            order: -1;
+            margin-left: 0;
+        }
     }
     .contact-list li {
         margin-right: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #fff;
-        border-radius: 50%;
-        width: 44px;
-        height: 44px;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+        }
         &:last-child {
             margin-right: 0;
         }
@@ -102,6 +125,9 @@
                     margin-right: 10px;
                 }
             }
+            @media (max-width: $width-mobile) {
+                margin-right: 0;
+            }
         }
     }
     nav > ul {
@@ -113,6 +139,10 @@
             margin-top: 36px;
             column-gap: 20px;
             justify-content: space-between;
+        }
+        @media (max-width: $width-mobile) {
+            row-gap: 23px;
+            margin-top: 0;
         }
     }
     & nav > button {
@@ -131,6 +161,9 @@
         @media (max-width: 1920px) {
             top: -52px;
             right: -10px;
+        }
+        @media (max-width: $width-mobile) {
+            top: -20px;
         }
         svg {
             fill: $color-pink-normal;
