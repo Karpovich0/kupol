@@ -27,6 +27,7 @@
     svg {
         display: block;
         fill: #ffffff;
+        transition: fill 0.2s ease, stroke 0.2s ease;
     }
     svg:hover {
         fill: $color-pink-hover;
@@ -84,6 +85,7 @@
         }
     }
     .icon-link {
+        transition: color 0.2s ease;
         @media (max-width: $width-pc) {
             order: -1;
         }
@@ -97,6 +99,9 @@
             & > span {
                 display: none;
             }
+        }
+        &:hover {
+            color: $color-pink-normal;
         }
     }
     & nav > button {
@@ -164,6 +169,139 @@
     }
 }
 
+.header-visible {
+    background-color: #fff;
+    box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.03);
+}
+
+.header nav ul {
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+}
+.pages-list {
+    align-items: center;
+    li {
+        margin-right: 34px;
+        .current {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: $color-pink-normal;
+            }
+        }
+        a {
+            transition: color 0.2s ease;
+        }
+        a:not(.current):hover {
+            color: $color-pink-normal;
+        }
+    }
+}
+.contact-list {
+    display: flex;
+    align-items: center;
+    li {
+        margin-right: 13px;
+    }
+    li:last-child {
+        margin-right: 0;
+    }
+}
+
+.header-language {
+    position: relative;
+    @media (max-width: $width-pc) {
+        justify-self: end;
+    }
+    button {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        margin-right: 9px;
+        text-transform: uppercase;
+        font-family: $font-poppins;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        color: #ffffff;
+        cursor: pointer;
+        transition: color 0.2s ease;
+        @media (max-width: $width-mobile) {
+            padding: 0;
+            margin-right: 0;
+        }
+        &:hover span {
+            color: $color-pink-hover;
+        }
+    }
+    button:hover > svg {
+        fill: $color-pink-hover;
+    }
+    svg {
+        margin-left: 9px;
+        fill: #ffffff;
+    }
+    button:hover > ul {
+        transform: scale(1);
+    }
+    ul {
+        min-width: 62px;
+        padding: 11px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        bottom: -134px;
+        left: 0;
+        position: absolute;
+        background-color: #fff;
+        transform: scale(0);
+        transition: transform 0.2s ease;
+        transform-origin: center 0;
+        &::before {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 10px;
+            background-color: transparent;
+        }
+        li {
+            min-height: 36px;
+            display: flex;
+            justify-content: stretch;
+        }
+        li a {
+            width: 100%;
+            padding: 6px 12px;
+            color: $color-black;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: left;
+            transition: background-color 0.2s ease;
+        }
+        li:not(.current):hover {
+            background-color: #f6f6f6;
+        }
+        li.current {
+            background-color: $color-pink-normal;
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+}
+// modificators
 .header-black {
     color: $color-black;
     svg {
@@ -187,69 +325,6 @@
         }
     }
 }
-.header-visible {
-    background-color: #fff;
-    box-shadow: 0px 4px 20px 10px rgba(0, 0, 0, 0.03);
-}
-
-.header nav ul {
-    display: flex;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 140%;
-}
-.pages-list {
-    align-items: center;
-    li {
-        margin-right: 34px;
-    }
-}
-.contact-list {
-    display: flex;
-    align-items: center;
-    li {
-        margin-right: 13px;
-    }
-    li:last-child {
-        margin-right: 0;
-    }
-}
-
-.header-language {
-    @media (max-width: $width-pc) {
-        justify-self: end;
-    }
-    button {
-        display: flex;
-        align-items: center;
-        border: none;
-        background-color: transparent;
-        margin-right: 9px;
-        text-transform: uppercase;
-        font-family: $font-poppins;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 140%;
-        color: #ffffff;
-        cursor: pointer;
-        @media (max-width: $width-mobile) {
-            padding: 0;
-            margin-right: 0;
-        }
-        &:hover {
-            color: $color-pink-hover;
-        }
-    }
-    button:hover > svg {
-        fill: $color-pink-hover;
-    }
-    svg {
-        margin-left: 9px;
-        fill: #ffffff;
-    }
-}
-
 .header-burger {
     @media (max-width: $width-pc) {
         height: 100%;

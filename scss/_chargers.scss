@@ -19,6 +19,9 @@
         @media (min-width: $width-mobile-start) {
             grid-template-columns: 1fr 1fr;
         }
+        @media (min-width: $width-pc-start) {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
     & ul img {
         margin-bottom: 24px;
