@@ -10,7 +10,7 @@
     justify-content: center;
     background-color: transparent;
     color: #ffffff;
-    transition: height 0.2s;
+    transition: background-color 0.2s ease;
     @media (max-width: $width-pc) {
         min-height: 50px;
     }

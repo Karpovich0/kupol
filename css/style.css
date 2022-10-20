@@ -242,9 +242,9 @@ section h2 {
           justify-content: center;
   background-color: transparent;
   color: #ffffff;
-  -webkit-transition: height 0.2s;
-  -o-transition: height 0.2s;
-  transition: height 0.2s;
+  -webkit-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 @media (max-width: 1199px) {

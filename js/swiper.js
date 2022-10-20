@@ -8,7 +8,7 @@ const BURGER = document.querySelector(".burger");
 const BODY = document.querySelector("body");
 
 let isSwiperAutoPlay = true;
-let isBurderOpened = false;
+let isBurgerOpened = false;
 
 const swiper = new Swiper(".swiper", {
 	// arrows
@@ -84,12 +84,12 @@ BURGER.addEventListener("click", function () {
 		swiper.autoplay.start();
 		isSwiperAutoPlay = true;
 	}
-	if (!isBurderOpened) {
-		isBurderOpened = true;
-	} else {
+	if (!isBurgerOpened) {
+		isBurgerOpened = true;
+	} else if (isBurgerOpened) {
 		if (swiper.realIndex == 0) {
 			BURGER.classList.add("burger-black");
 		}
-		isBurderOpened = false;
+		isBurgerOpened = false;
 	}
 });
