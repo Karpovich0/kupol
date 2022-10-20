@@ -16,10 +16,21 @@ $width-pc-start: 1200px;
 * {
     scroll-behavior: smooth;
 }
+html {
+    height: 100%;
+}
 body {
     color: $color-black;
     font-family: $font-inter;
     font-style: normal;
+    & > div {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        main {
+            flex-grow: 1;
+        }
+    }
 }
 .container {
     margin-left: auto;
@@ -123,6 +134,31 @@ section h2 {
         margin-right: 8px;
     }
 }
+.swiper {
+    button {
+        padding: 0;
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        width: 64px;
+        height: 64px;
+        transform: translateY(-50%);
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        transform-origin: center;
+        & {
+            svg {
+                fill: #ffffff;
+            }
+        }
+    }
+    .swiper-next {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}
 
 .swiper-pagination-wrapper {
     display: flex;
@@ -151,6 +187,37 @@ section h2 {
         overflow: hidden;
     }
 }
+.breadcrumb {
+    margin: 86px auto 16px;
+    ul {
+        display: flex;
+        align-items: center;
+    }
+    li {
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        text-transform: capitalize;
+        column-gap: 12px;
+        color: $color-pink-normal;
+        &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 16px;
+            background-color: #13212b;
+        }
+    }
+    li:last-child {
+        color: #13212b;
+        &::after {
+            content: none;
+        }
+    }
+}
 
 @import "header";
 @import "intro";
@@ -161,3 +228,5 @@ section h2 {
 @import "advantages";
 @import "allowed";
 @import "footer";
+@import "products";
+@import "item";

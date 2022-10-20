@@ -1,0 +1,194 @@
+.preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    & > div:first-child {
+        max-width: 550px;
+    }
+    .swiper:first-child {
+        max-width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        .swiper-prev,
+        .swiper-next {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .swiper-next {
+            right: 0;
+        }
+    }
+    .swiper-two {
+        max-width: 100%;
+        .swiper-slide {
+            max-width: 25%;
+        }
+
+        .swiper-slide-thumb-active {
+            border: 2px solid $color-pink-normal;
+        }
+    }
+    h2 {
+        margin-bottom: 24px;
+        font-family: $font-inter;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 40px;
+        text-align: left;
+        span {
+            display: block;
+            font-weight: 400;
+            text-transform: lowercase;
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
+    }
+    h2 + table {
+        width: 100%;
+        margin-bottom: 47px;
+        border-collapse: collapse;
+        thead {
+            tr {
+                padding-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+                th {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 140%;
+                }
+            }
+        }
+        tbody {
+            tr {
+                display: flex;
+                justify-content: space-between;
+            }
+            td {
+                display: flex;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+                span {
+                    margin-right: 1px;
+                    padding: 12px 13px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #ffffff;
+                    min-width: 56px;
+                    min-height: 46px;
+                    text-transform: uppercase;
+                    background-color: #8e8e8e;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            td:nth-child(2) {
+                span {
+                    padding: 13px 18px;
+                }
+            }
+        }
+    }
+    table + div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 40px;
+            color: $color-pink-normal;
+            span {
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+        .button {
+            padding: 16px 24px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+        }
+    }
+    table + div + div {
+        display: flex;
+        align-items: center;
+        column-gap: 59px;
+        span {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}
+.specs {
+    h2 {
+        margin-bottom: 34px;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 140%;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 34px;
+        thead {
+            tr {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 44px;
+                color: #ffffff;
+                background: #8e8e8e;
+            }
+            th {
+                text-align: left;
+            }
+        }
+        tbody {
+            tr:nth-child(even) {
+                background: rgba(20, 20, 20, 0.05);
+            }
+        }
+        tr {
+            padding: 0 12px;
+            min-height: 44px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & *:nth-child(2) {
+                width: 100%;
+                max-width: 360px;
+            }
+        }
+    }
+    table + table {
+        margin-bottom: 24px;
+        tbody td:nth-child(2) {
+            display: flex;
+            justify-content: end;
+        }
+    }
+    table + table + p {
+        margin-bottom: 34px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    article {
+        margin-bottom: 34px;
+        h3 {
+            margin-bottom: 24px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+        }
+        p {
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 24px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

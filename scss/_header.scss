@@ -206,6 +206,9 @@
     }
 }
 .contact-list {
+    a {
+        display: block;
+    }
     display: flex;
     align-items: center;
     li {
@@ -279,6 +282,7 @@
             min-height: 36px;
             display: flex;
             justify-content: stretch;
+            transition: background-color 0.2s ease;
         }
         li a {
             width: 100%;

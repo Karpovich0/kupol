@@ -1,0 +1,107 @@
+.products {
+    h2 {
+        margin-bottom: 16px;
+        font-family: $font-rubik-one;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 140%;
+        text-align: left;
+    }
+    & > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            display: flex;
+            margin-bottom: 15px;
+            span {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 150%;
+                text-decoration-line: underline;
+            }
+            button {
+                display: flex;
+                column-gap: 5px;
+                margin-left: 24px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 150%;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                &::after {
+                    content: "";
+                    width: 24px;
+                    height: 24px;
+                    background: url(/src/page-products/arrow.svg);
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+    & > ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px 20px;
+        li {
+            a > img {
+                margin-bottom: 16px;
+                transition: transform 0.2s ease;
+                &:hover {
+                    transform: scale(1.2);
+                    border: 2px solid $color-pink-normal;
+                }
+            }
+            a > p {
+                margin-bottom: 8px;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 28px;
+                text-transform: uppercase;
+                transition: color 0.2s ease;
+                &:hover {
+                    color: $color-pink-normal;
+                }
+                span {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 28px;
+                }
+            }
+            & > p {
+                margin-bottom: 17px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 26px;
+            }
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 28px;
+                }
+                strong {
+                    font-weight: 700;
+                    font-size: 28px;
+                    line-height: 28px;
+                }
+                .button {
+                    min-width: 119px;
+                    min-height: 44px;
+                    font-family: $font-rubik-one;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: $color-pink-normal;
+                    background-color: #ffffff;
+                    border: 1px solid $color-pink-normal;
+                }
+            }
+        }
+    }
+}

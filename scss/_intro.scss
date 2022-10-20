@@ -119,23 +119,7 @@
             }
         }
     }
-    button {
-        z-index: 10;
-        position: absolute;
-        top: 50%;
-        width: 64px;
-        height: 64px;
-        transform: translateY(-50%);
-        border: none;
-        cursor: pointer;
-        background-color: transparent;
-        transform-origin: center;
-        & {
-            svg {
-                fill: #ffffff;
-            }
-        }
-    }
+
     .swiper-arrow {
         svg {
             fill: $color-black;
@@ -146,9 +130,6 @@
     }
     .swiper-next {
         right: 125px;
-        svg {
-            transform: rotate(180deg);
-        }
     }
     @media (max-width: 1919px) {
         .swiper-prev,
