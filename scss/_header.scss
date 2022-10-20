@@ -346,6 +346,7 @@
             display: none;
             margin: 0 auto 24px auto;
             order: 1;
+            align-items: center;
 
             @media (max-width: $width-mobile) {
                 display: flex;
