@@ -1,4 +1,5 @@
 .products {
+    margin-bottom: 57px;
     h2 {
         margin-bottom: 16px;
         font-family: $font-rubik-one;
@@ -6,11 +7,23 @@
         font-size: 24px;
         line-height: 140%;
         text-align: left;
+        color: $color-black2;
+        @media (max-width: $width-pc) {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+        }
+        @media (min-width: $width-tablet) {
+            margin-bottom: 24px;
+        }
     }
     & > div {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: $width-pc) {
+            justify-content: center;
+        }
         div {
             display: flex;
             margin-bottom: 15px;
@@ -38,14 +51,31 @@
                     background-repeat: no-repeat;
                 }
             }
+            @media (max-width: $width-pc) {
+                display: none;
+            }
         }
     }
     & > ul {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 50px 20px;
+        gap: 54px 20px;
+        @media (max-width: $width-pc) {
+            padding: 0 68px;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: $width-mobile) {
+            gap: 58px 20px;
+            grid-template-columns: 1fr;
+            padding: 0 100px;
+        }
+        @media (max-width: $width-mobile-middle) {
+            grid-template-columns: 1fr;
+            padding: 0 13px;
+        }
         li {
             a > img {
+                width: 100%;
                 margin-bottom: 16px;
                 transition: transform 0.2s ease;
                 &:hover {
@@ -54,6 +84,8 @@
                 }
             }
             a > p {
+                display: flex;
+                justify-content: space-between;
                 margin-bottom: 8px;
                 font-weight: 700;
                 font-size: 20px;
@@ -101,6 +133,9 @@
                     background-color: #ffffff;
                     border: 1px solid $color-pink-normal;
                 }
+            }
+            @media (max-width: $width-pc) {
+                max-width: 100%;
             }
         }
     }

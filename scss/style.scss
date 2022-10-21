@@ -1,4 +1,5 @@
 $color-black: #141414;
+$color-black2: #13212b;
 $color-pink-normal: #ec5959;
 $color-pink-hover: #ff7272;
 $color-pink-active: #bd4747;
@@ -8,6 +9,7 @@ $font-poppins: "Poppins", sans-serif;
 $font-roboto: "Roboto", sans-serif;
 $font-rubik-one: "Rubik One", sans-serif;
 $width-mobile-start: 425px;
+$width-mobile-middle: 576px;
 $width-mobile: 767px;
 $width-tablet: 768px;
 $width-tablet-large: 991px;
@@ -189,6 +191,9 @@ section h2 {
 }
 .breadcrumb {
     margin: 86px auto 16px;
+    @media (max-width: $width-pc) {
+        margin-top: 66px;
+    }
     ul {
         display: flex;
         align-items: center;
@@ -208,13 +213,29 @@ section h2 {
             display: block;
             width: 1px;
             height: 16px;
-            background-color: #13212b;
+            background-color: $color-black2;
         }
     }
     li:last-child {
-        color: #13212b;
+        color: $color-black2;
         &::after {
             content: none;
+        }
+    }
+    li > span {
+        display: inline;
+        @media (max-width: $width-mobile) {
+            display: none;
+        }
+    }
+    & > span {
+        display: none;
+        @media (max-width: $width-mobile) {
+            margin-top: 9px;
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 140%;
         }
     }
 }
