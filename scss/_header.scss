@@ -224,7 +224,7 @@
     @media (max-width: $width-pc) {
         justify-self: end;
     }
-    button {
+    & > div {
         display: flex;
         align-items: center;
         border: none;
@@ -246,14 +246,14 @@
             color: $color-pink-hover;
         }
     }
-    button:hover > svg {
+    & > div:hover > svg {
         fill: $color-pink-hover;
     }
     svg {
         margin-left: 9px;
         fill: #ffffff;
     }
-    button:hover > ul {
+    & > div:hover > ul {
         transform: scale(1);
     }
     ul {
@@ -316,7 +316,7 @@
         stroke: $color-black;
     }
     .header-language {
-        button {
+        & > div {
             color: $color-black;
             svg {
                 fill: $color-black;

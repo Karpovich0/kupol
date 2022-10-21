@@ -253,10 +253,11 @@
     table {
         width: 100%;
         margin-bottom: 26px;
+
         thead {
             tr {
                 font-weight: 700;
-                font-size: 14px;
+                font-size: 16px;
                 line-height: 44px;
                 color: #ffffff;
                 background: #8e8e8e;
@@ -282,15 +283,18 @@
             column-gap: 30px;
             align-items: center;
             font-weight: 400;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 44px;
             & *:nth-child(2) {
                 width: 100%;
                 max-width: 360px;
             }
+            @media (max-width: $width-pc) {
+                font-size: 14px;
+            }
             @media (max-width: $width-mobile) {
                 line-height: 28px;
-                column-gap: 15px;
+                column-gap: 10px;
             }
         }
     }
@@ -314,10 +318,21 @@
                 padding-right: 0;
             }
         }
+        tbody {
+            .number {
+                grid-template-columns: 2fr 1fr;
+                td:nth-child(2) {
+                    justify-content: start;
+                    @media (max-width: $width-mobile) {
+                        justify-content: end;
+                    }
+                }
+            }
+        }
         tr {
             grid-template-columns: 1fr max-content;
             @media (max-width: $width-mobile) {
-                line-height: 27px;
+                line-height: 26px;
             }
         }
     }
