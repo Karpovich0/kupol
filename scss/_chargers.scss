@@ -50,6 +50,7 @@
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-color: $color-pink-normal;
+                transition: background-color 0.2s ease;
             }
             @media (max-width: $width-pc) {
                 margin-top: 6px;
@@ -57,6 +58,9 @@
         }
         a:hover::after {
             background-color: $color-pink-hover;
+        }
+        a:active::after {
+            background-color: $color-pink-active;
         }
         p {
             margin-bottom: 3px;

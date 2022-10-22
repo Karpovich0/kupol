@@ -107,6 +107,16 @@
             border-radius: 50%;
             width: 44px;
             height: 44px;
+            transition: background-color 0.2s ease;
+            svg {
+                fill: $color-black;
+            }
+            &:hover {
+                background-color: $color-pink-normal;
+            }
+            &:active {
+                background-color: $color-pink-active;
+            }
         }
         &:last-child {
             margin-right: 0;
@@ -159,6 +169,7 @@
         border: 1px solid $color-pink-normal;
         background-color: transparent;
         cursor: pointer;
+        transition: border-color 0.2s ease, background-color 0.2s ease;
         @media (max-width: 1920px) {
             top: -52px;
             right: -10px;
@@ -168,6 +179,7 @@
         }
         svg {
             fill: $color-pink-normal;
+            transition: fill 0.2s ease;
         }
         &:hover {
             border-color: $color-pink-hover;

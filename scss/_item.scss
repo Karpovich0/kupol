@@ -53,6 +53,24 @@
         .swiper-next {
             right: 0;
         }
+        .swiper-next:hover,
+        .swiper-prev:hover {
+            transition: background-color 0.2s ease;
+            svg {
+                transition: fill 0.2s ease;
+            }
+        }
+        .swiper-next:hover,
+        .swiper-prev:hover {
+            background-color: $color-pink-normal;
+            svg {
+                fill: #ffffff;
+            }
+        }
+        .swiper-next:active,
+        .swiper-prev:active {
+            background-color: $color-pink-active;
+        }
         @media (max-width: $width-mobile) {
             margin-top: 105px;
         }
@@ -261,6 +279,12 @@
             a {
                 display: flex;
                 align-items: center;
+                svg {
+                    transition: fill 0.2s ease;
+                    &:hover {
+                        fill: $color-pink-normal;
+                    }
+                }
             }
         }
         span {

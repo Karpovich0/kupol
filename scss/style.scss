@@ -3,7 +3,7 @@ $color-black2: #13212b;
 $color-pink-normal: #ec5959;
 $color-pink-hover: #ff7272;
 $color-pink-active: #bd4747;
-$color-disabled: rgba(20, 20, 20, 0.2);
+$color-disabled: #c6c6c6;
 $font-inter: "Inter", sans-serif;
 $font-rubik-one: "Rubik One", sans-serif;
 $width-mobile-start: 425px;
@@ -98,10 +98,20 @@ section h2 {
     line-height: 140%;
     text-transform: uppercase;
     color: #ffffff;
+    transition: background-color 0.2s ease;
     @media (max-width: $width-pc) {
         min-width: 157px;
         min-height: 44px;
         font-size: 16px;
+    }
+    &:hover {
+        background-color: $color-pink-hover;
+    }
+    &:active {
+        background-color: $color-pink-active;
+    }
+    &:disabled {
+        background-color: $color-disabled;
     }
 }
 .paragraph {
@@ -157,6 +167,24 @@ section h2 {
         svg {
             transform: rotate(180deg);
         }
+    }
+    .swiper-next:hover,
+    .swiper-prev:hover {
+        transition: background-color 0.2s ease;
+        svg {
+            transition: fill 0.2s ease;
+        }
+    }
+    .swiper-next:hover,
+    .swiper-prev:hover {
+        background-color: $color-pink-normal;
+        svg {
+            fill: #ffffff;
+        }
+    }
+    .swiper-next:active,
+    .swiper-prev:active {
+        background-color: $color-pink-active;
     }
 }
 
@@ -279,3 +307,4 @@ article ul {
 @import "item-two";
 @import "articles";
 @import "article";
+@import "result";

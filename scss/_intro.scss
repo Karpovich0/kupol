@@ -152,6 +152,10 @@
 .intro + .swiper-pagination-wrapper {
     display: flex;
     justify-content: center;
+    @media (min-width: $width-pc-start) {
+        position: relative;
+        bottom: 130px;
+    }
     @media (max-width: $width-pc) {
         position: relative;
         bottom: 74px;

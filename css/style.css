@@ -141,6 +141,9 @@ section h2 {
   line-height: 140%;
   text-transform: uppercase;
   color: #ffffff;
+  -webkit-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 @media (max-width: 1199px) {
@@ -149,6 +152,18 @@ section h2 {
     min-height: 44px;
     font-size: 16px;
   }
+}
+
+.button:hover {
+  background-color: #ff7272;
+}
+
+.button:active {
+  background-color: #bd4747;
+}
+
+.button:disabled {
+  background-color: #c6c6c6;
 }
 
 .paragraph {
@@ -230,6 +245,35 @@ section h2 {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.swiper .swiper-next:hover,
+.swiper .swiper-prev:hover {
+  -webkit-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.swiper .swiper-next:hover svg,
+.swiper .swiper-prev:hover svg {
+  -webkit-transition: fill 0.2s ease;
+  -o-transition: fill 0.2s ease;
+  transition: fill 0.2s ease;
+}
+
+.swiper .swiper-next:hover,
+.swiper .swiper-prev:hover {
+  background-color: #ec5959;
+}
+
+.swiper .swiper-next:hover svg,
+.swiper .swiper-prev:hover svg {
+  fill: #ffffff;
+}
+
+.swiper .swiper-next:active,
+.swiper .swiper-prev:active {
+  background-color: #bd4747;
 }
 
 .swiper-pagination-wrapper {
@@ -1335,6 +1379,13 @@ article ul li::before {
           justify-content: center;
 }
 
+@media (min-width: 1200px) {
+  .intro + .swiper-pagination-wrapper {
+    position: relative;
+    bottom: 130px;
+  }
+}
+
 @media (max-width: 1199px) {
   .intro + .swiper-pagination-wrapper {
     position: relative;
@@ -1495,6 +1546,9 @@ article ul li::before {
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #ec5959;
+  -webkit-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 @media (max-width: 1199px) {
@@ -1505,6 +1559,10 @@ article ul li::before {
 
 .chargers ul ul li a:hover::after {
   background-color: #ff7272;
+}
+
+.chargers ul ul li a:active::after {
+  background-color: #bd4747;
 }
 
 .chargers ul ul li p {
@@ -1789,6 +1847,26 @@ article ul li::before {
   color: #ec5959;
   background-color: #fff;
   border: 1px solid #ec5959;
+  -webkit-transition: color 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+  -o-transition: color 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+}
+
+.allowed .button:hover {
+  background-color: #ec5959;
+  color: #ffffff;
+}
+
+.allowed .button:active {
+  background-color: #bd4747;
+  border: 1px solid #bd4747;
+  color: #ffffff;
+}
+
+.allowed .button:disabled {
+  background-color: #ffffff;
+  border: 1px solid #c6c6c6;
+  color: #c6c6c6;
 }
 
 .footer {
@@ -1998,6 +2076,21 @@ article ul li::before {
           border-radius: 50%;
   width: 44px;
   height: 44px;
+  -webkit-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.footer .contact-list li a svg {
+  fill: #141414;
+}
+
+.footer .contact-list li a:hover {
+  background-color: #ec5959;
+}
+
+.footer .contact-list li a:active {
+  background-color: #bd4747;
 }
 
 .footer .contact-list li:last-child {
@@ -2091,6 +2184,9 @@ article ul li::before {
   border: 1px solid #ec5959;
   background-color: transparent;
   cursor: pointer;
+  -webkit-transition: border-color 0.2s ease, background-color 0.2s ease;
+  -o-transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 @media (max-width: 1920px) {
@@ -2108,6 +2204,9 @@ article ul li::before {
 
 .footer nav > button svg {
   fill: #ec5959;
+  -webkit-transition: fill 0.2s ease;
+  -o-transition: fill 0.2s ease;
+  transition: fill 0.2s ease;
 }
 
 .footer nav > button:hover {
@@ -2347,6 +2446,26 @@ article ul li::before {
   color: #ec5959;
   background-color: #ffffff;
   border: 1px solid #ec5959;
+  -webkit-transition: color 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+  -o-transition: color 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+}
+
+.products > ul li div .button:hover {
+  background-color: #ec5959;
+  color: #ffffff;
+}
+
+.products > ul li div .button:active {
+  background-color: #bd4747;
+  border: 1px solid #bd4747;
+  color: #ffffff;
+}
+
+.products > ul li div .button:disabled {
+  background-color: #ffffff;
+  border: 1px solid #c6c6c6;
+  color: #c6c6c6;
 }
 
 @media (max-width: 1199px) {
@@ -2446,6 +2565,35 @@ article ul li::before {
 
 .preview .swiper-one .swiper-next {
   right: 0;
+}
+
+.preview .swiper-one .swiper-next:hover,
+.preview .swiper-one .swiper-prev:hover {
+  -webkit-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.preview .swiper-one .swiper-next:hover svg,
+.preview .swiper-one .swiper-prev:hover svg {
+  -webkit-transition: fill 0.2s ease;
+  -o-transition: fill 0.2s ease;
+  transition: fill 0.2s ease;
+}
+
+.preview .swiper-one .swiper-next:hover,
+.preview .swiper-one .swiper-prev:hover {
+  background-color: #ec5959;
+}
+
+.preview .swiper-one .swiper-next:hover svg,
+.preview .swiper-one .swiper-prev:hover svg {
+  fill: #ffffff;
+}
+
+.preview .swiper-one .swiper-next:active,
+.preview .swiper-one .swiper-prev:active {
+  background-color: #bd4747;
 }
 
 @media (max-width: 767px) {
@@ -2769,6 +2917,16 @@ article ul li::before {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.preview table + div + div .contact-list li a svg {
+  -webkit-transition: fill 0.2s ease;
+  -o-transition: fill 0.2s ease;
+  transition: fill 0.2s ease;
+}
+
+.preview table + div + div .contact-list li a svg:hover {
+  fill: #ec5959;
 }
 
 .preview table + div + div span {
@@ -3376,5 +3534,139 @@ article + img {
 @media (max-width: 1199px) {
   .article li {
     font-size: 14px;
+  }
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.result {
+  padding: 155px 34px 86px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  max-width: 850px;
+  width: 100%;
+}
+
+@media (max-width: 1199px) {
+  .result {
+    padding: 100px 34px 134px;
+  }
+}
+
+@media (max-width: 767px) {
+  .result {
+    padding: 100px 34px 66px;
+  }
+}
+
+.result img:nth-child(1) {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1199px) {
+  .result img:nth-child(1) {
+    margin-bottom: 90px;
+  }
+}
+
+@media (max-width: 767px) {
+  .result img:nth-child(1) {
+    margin-bottom: 40px;
+  }
+}
+
+.result .title {
+  margin-bottom: 30px;
+  font-family: "Rubik One", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1199px) {
+  .result .title {
+    font-size: 24px;
+    line-height: 140%;
+  }
+}
+
+@media (max-width: 767px) {
+  .result .title {
+    margin-bottom: 17px;
+  }
+}
+
+.result .cable {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1199px) {
+  .result .cable {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .result .cable {
+    display: none;
+  }
+}
+
+.result .text {
+  width: 100%;
+  max-width: 295px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  .result .text {
+    max-width: 236px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.result .button {
+  margin: 44px auto 0;
+}
+
+.result span {
+  margin-bottom: 36px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  color: #ec5959;
+}
+
+@media (max-width: 1199px) {
+  .result span {
+    font-weight: 500;
+    font-size: 24px;
   }
 }
