@@ -3537,7 +3537,7 @@ article + img {
   }
 }
 
-main {
+.main {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr;
