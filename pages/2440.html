@@ -8,6 +8,8 @@
 		<!-- fonts -->
 		<link rel="stylesheet" href="/fonts/inter/inter.css" />
 		<link rel="stylesheet" href="/fonts/rubik-one/rubik-one.css" />
+		<!-- swiper -->
+		<link rel="stylesheet" href="/css/swiper-bundle.min.css" />
 		<!-- styles -->
 		<link rel="stylesheet" href="/css/normalize.css" />
 		<link rel="stylesheet" href="/css/drop-default-styles.css" />
@@ -136,12 +138,17 @@
 				/>
 				<path d="M78.6117 14.9013V0.848633H74.8342V18.6486H89V14.9013H78.6117Z" />
 			</symbol>
+			<symbol id="arrow">
+				<path
+					d="M29.1659 30.9999L38.3109 21.8549C38.792 21.3709 39.0621 20.7161 39.0621 20.0336C39.0621 19.3512 38.792 18.6964 38.3109 18.2124C38.0707 17.9703 37.785 17.7781 37.4702 17.6469C37.1554 17.5158 36.8177 17.4482 36.4767 17.4482C36.1357 17.4482 35.798 17.5158 35.4832 17.6469C35.1684 17.7781 34.8827 17.9703 34.6425 18.2124L23.6892 29.1657C23.4471 29.4059 23.2549 29.6916 23.1237 30.0064C22.9926 30.3212 22.925 30.6589 22.925 30.9999C22.925 31.3409 22.9926 31.6786 23.1237 31.9934C23.2549 32.3082 23.4471 32.5939 23.6892 32.8341L34.6425 43.9166C34.8839 44.156 35.1702 44.3454 35.4849 44.474C35.7997 44.6025 36.1367 44.6677 36.4767 44.6657C36.8167 44.6677 37.1537 44.6025 37.4685 44.474C37.7832 44.3454 38.0695 44.156 38.3109 43.9166C38.792 43.4325 39.0621 42.7778 39.0621 42.0953C39.0621 41.4128 38.792 40.7581 38.3109 40.2741L29.1659 30.9999Z"
+				/>
+			</symbol>
 		</svg>
 		<div>
 			<header class="header header-black header-visible">
 				<nav class="container">
 					<button type="button" class="burger burger-black"><span></span></button>
-					<a href="index.html" class="logo">
+					<a href="/index.html" class="logo">
 						<svg width="171" height="42">
 							<use xlink:href="#logo"></use>
 						</svg>
@@ -155,7 +162,7 @@
 					<ul class="pages-list">
 						<li><a href="/index.html">Главная</a></li>
 						<li><a class="current">Продукция</a></li>
-						<li><a href="/pages/articles.html">Статьи</a></li>
+						<li><a href="">Статьи</a></li>
 						<li><a href="">Контакты</a></li>
 					</ul>
 					<a class="icon-link" href="tel:+380504412311">
@@ -205,105 +212,318 @@
 					</a>
 				</nav>
 			</header>
+			<nav class="breadcrumb container">
+				<ul>
+					<li>
+						<a href="/index.html"><img src="/src/general/home.svg" alt="" width="24" height="24" /></a>
+					</li>
+					<li><a href="/products.html">продукция</a></li>
+					<li>УЗПС-24-40 <span>Зарядное устройство для аккумуляторов</span></li>
+				</ul>
+				<span>Зарядное устройство для аккумуляторов</span>
+			</nav>
 			<main>
-				<nav class="breadcrumb container">
-					<ul>
-						<li>
-							<a href="/index.html"><img src="/src/general/home.svg" alt="" width="24" height="24" /></a>
-						</li>
-						<li>продукция</li>
-					</ul>
-				</nav>
-				<section class="products container">
+				<section class="preview container">
 					<div>
-						<h2>продукция</h2>
-						<div><span>Сортировать по:</span><button>Популярности</button></div>
+						<div class="swiper swiper-one">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<img src="/src/2440/1.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/2.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/3.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/4.jpg" alt="" />
+								</li>
+							</ul>
+							<button class="swiper-prev" type="button">
+								<svg width="64" height="64">
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</button>
+							<button class="swiper-next" type="button">
+								<svg width="64" height="64">
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</button>
+						</div>
+						<div thumbsSlider="" class="swiper swiper-two">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<img src="/src/2440/1.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/2.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/3.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/4.jpg" alt="" />
+								</li>
+							</ul>
+						</div>
+						<div class="swiper-pagination-wrapper">
+							<div class="swiper-pagination"></div>
+						</div>
 					</div>
-					<ul>
-						<li>
-							<a href="/pages/126.html"><img src="/src/page-products/1.jpg" alt="" /></a>
-							<a href="/pages/126.html">
-								<p>УЗПС 12-6 <span>(15 В-6 А)</span></p>
-							</a>
-							<p>Зарядное устройство автомобиль/мопед</p>
-							<div>
-								<span><strong>4 000</strong> грн</span
-								><a class="button" href="/pages/126.html">купить</a>
-							</div>
-						</li>
-						<li>
-							<a href="/pages/2425.html"><img src="/src/page-products/2.jpg" alt="" /></a>
-							<a href="/pages/2425.html">
-								<p>УЗПС 24-25 <span>(3-32 В, 1-25 А)</span></p>
-							</a>
-							<p>Зарядное устройство для аккумуляторов</p>
-							<div>
-								<span><strong>6 000</strong> грн</span
-								><a class="button" href="/pages/2425.html">купить</a>
-							</div>
-						</li>
-						<li>
-							<a href="/pages/2440.html"><img src="/src/page-products/3.jpg" alt="" /></a>
-							<a href="/pages/2440.html">
-								<p>УЗПС 24-40 <span>(3-32 В, 1-40 А)</span></p>
-							</a>
-							<p>Зарядное устройство для аккумуляторов</p>
-							<div>
-								<span><strong>12 000</strong> грн</span
-								><a class="button" href="/pages/2440.html">купить</a>
-							</div>
-						</li>
-						<li>
-							<a href=""><img src="/src/page-products/3.jpg" alt="" /></a>
-							<a href="">
-								<p>узпс 48-20 <span>(6-65 В, 0.5-20 А)</span></p>
-							</a>
-							<p>Зарядное устройство для аккумуляторов</p>
-							<div>
-								<span><strong>12 000</strong> грн</span><a class="button" href="">купить</a>
-							</div>
-						</li>
-						<li>
-							<a href=""><img src="/src/page-products/3.jpg" alt="" /></a>
-							<a href="">
-								<p>Узпс 72-15 <span>(12-99 В, 0.5-15 А)</span></p>
-							</a>
-							<p>Зарядное устройство для аккумуляторов</p>
-							<div>
-								<span><strong>12 000</strong> грн</span><a class="button" href="">купить</a>
-							</div>
-						</li>
-						<li>
-							<a href=""><img src="/src/page-products/4.jpg" alt="" /></a>
-							<a href="">
-								<p>УЗПС 48-65 <span>(6-65 В, 3-65 А)</span></p>
-							</a>
-							<p>Зарядное устройство автомобиль/мопед</p>
-							<div>
-								<span><strong>16 000</strong> грн</span><a class="button" href="">купить</a>
-							</div>
-						</li>
-						<li>
-							<a href=""><img src="/src/page-products/4.jpg" alt="" /></a>
-							<a href="">
-								<p>УЗПС 48-65 <span>(10-99 В, 1-45 А)</span></p>
-							</a>
-							<p>Зарядное устройство автомобиль/мопед</p>
-							<div>
-								<span><strong>16 000</strong> грн</span><a class="button" href="">купить</a>
-							</div>
-						</li>
-						<li>
-							<a href=""><img src="/src/page-products/5.jpg" alt="" /></a>
-							<a href="">
-								<p>узпс 72-45 <span>(10-99 В, 1-45 А)</span></p>
-							</a>
-							<p>Устройство тестирования аккумуляторов</p>
-							<div>
-								<span><strong>24 000</strong> грн</span><a class="button" href="">купить</a>
-							</div>
-						</li>
-					</ul>
+					<div>
+						<h2>УЗПС-24-40<span>Зарядное устройство для аккумуляторов</span></h2>
+						<table>
+							<thead class="many">
+								<tr>
+									<th>Заряжает аккумуляторы:</th>
+									<th>Ток заряда:</th>
+								</tr>
+							</thead>
+							<tbody class="many">
+								<tr class="current">
+									<td><span>6 b</span><span>12 b</span><span>24 b</span></td>
+									<td><span>1-25 A</span></td>
+								</tr>
+								<tr>
+									<td>
+										<span>6 b</span><span>12 b</span><span>24 b</span><span>36 b</span
+										><span>48 b</span>
+									</td>
+									<td><span>0.5-20 A</span></td>
+								</tr>
+								<tr>
+									<td>
+										<span>12 b</span><span>24 b</span><span>36 b</span><span>48 b</span
+										><span>60 b</span><span>72 b</span>
+									</td>
+									<td><span>1-25 A</span></td>
+								</tr>
+							</tbody>
+						</table>
+						<div>
+							<div>12 000 <span>грн</span></div>
+							<a href="" class="button"><span>добавить</span> в корзину</a>
+						</div>
+						<div>
+							<span>Написать<br />менеджеру:</span>
+							<ul class="contact-list">
+								<li>
+									<a href="">
+										<svg width="24" height="17">
+											<use xlink:href="#mail"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<svg width="22" height="19">
+											<use xlink:href="#telegram"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<svg width="22" height="23">
+											<use xlink:href="#viber"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="specs container">
+					<h2>характеристики</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Технические характеристики</th>
+								<th>Значение параметра</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Диапазон входных напряжений</td>
+								<td>180 В – 250 В</td>
+							</tr>
+							<tr>
+								<td>Диапазон рабочих температур</td>
+								<td>От - 10 до +45</td>
+							</tr>
+							<tr>
+								<td>Выходное напряжение</td>
+								<td>от 6,0 до 32,0 Вольт</td>
+							</tr>
+							<tr>
+								<td>Ток заряда</td>
+								<td>от 1,0 до 40 Ампер</td>
+							</tr>
+							<tr>
+								<td>Номинальная мощность</td>
+								<td>800 Вт</td>
+							</tr>
+							<tr>
+								<td>Габариты</td>
+								<td>340×84×230 мм</td>
+							</tr>
+							<tr>
+								<td>Вес</td>
+								<td>3 кг</td>
+							</tr>
+							<tr>
+								<td>Тип покраски/td></td>
+								<td>порошковая</td>
+							</tr>
+							<tr>
+								<td>Степень защиты</td>
+								<td>IP20</td>
+							</tr>
+							<tr>
+								<td>Срок гарантии</td>
+								<td>2 года</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table-two">
+						<thead>
+							<tr>
+								<th colspan="2">Сервисные функции</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="number">
+								<td>Количество алгоритмов (профилей) заряда</td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<td>Телесигнализация</td>
+								<td><img src="/src/126/checked.svg" width="25" height="19" alt="" /></td>
+							</tr>
+							<tr>
+								<td>Режим блока питания</td>
+								<td><img src="/src/126/checked.svg" width="25" height="19" alt="" /></td>
+							</tr>
+							<tr>
+								<td>Функции защиты от «переполюсовки»</td>
+								<td><img src="/src/126/checked.svg" width="25" height="19" alt="" /></td>
+							</tr>
+							<tr>
+								<td>Функции защиты от перегрева</td>
+								<td><img src="/src/126/checked.svg" width="25" height="19" alt="" /></td>
+							</tr>
+							<tr>
+								<td>Функции защиты от перегрузки (к.з)</td>
+								<td><img src="/src/126/checked.svg" width="25" height="19" alt="" /></td>
+							</tr>
+							<tr>
+								<td>Регулировка тока (дискретность 0,1 А)</td>
+								<td><img src="/src/126/checked.svg" width="25" height="19" alt="" /></td>
+							</tr>
+							<tr>
+								<td>Регулировка напряжения (дискретность 0,1 В)</td>
+								<td><img src="/src/126/checked.svg" width="25" height="19" alt="" /></td>
+							</tr>
+							<tr>
+								<td>Работа c BMS (по RS-485)</td>
+								<td><img src="/src/126/checked.svg" width="25" height="19" alt="" /></td>
+							</tr>
+							<tr>
+								<td>Техническая поддержка в процессе эксплуатаций</td>
+								<td><img src="/src/126/checked.svg" width="25" height="19" alt="" /></td>
+							</tr>
+						</tbody>
+					</table>
+					<article>
+						<h3>Отличительные особенности</h3>
+						<p>
+							Наличие набора зарядных профилей позволяет эффективно заряжать как новые аккумуляторы, так и
+							давно находящиеся в эксплуатации. Изменяя параметры заряда можно заряжать любые типы
+							аккумуляторов.
+						</p>
+						<table class="support-type">
+							<thead>
+								<tr>
+									<th colspan="4">Поддерживаемые типы аккумуляторных батарей</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="5">Свинцово-кислотные</td>
+									<td rowspan="3">наливные</td>
+									<td class="one">стартерные</td>
+									<td>
+										<img src="/src/126/checked.svg" width="25" height="19" alt="" />
+									</td>
+								</tr>
+								<tr>
+									<td class="one">тяговые</td>
+									<td>
+										<img src="/src/126/checked.svg" width="25" height="19" alt="" />
+									</td>
+								</tr>
+								<tr>
+									<td class="one">резервные</td>
+									<td>
+										<img src="/src/126/checked.svg" width="25" height="19" alt="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">AGM</td>
+									<td>
+										<img src="/src/126/checked.svg" width="25" height="19" alt="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">Гелевые (Gel)</td>
+									<td>
+										<img src="/src/126/checked.svg" width="25" height="19" alt="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">Щелочные</td>
+									<td>
+										<img src="/src/126/checked.svg" width="25" height="19" alt="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">Литиевые (Li-Ion, LiFePO4)</td>
+									<td>
+										<img src="/src/126/checked.svg" width="25" height="19" alt="" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</article>
+					<img src="/src/2425/scheme.png" width="1120" alt="" />
+					<article>
+						<h3>Реализуемые профили заряда</h3>
+						<ul>
+							<li>Заряд стабилизированным напряжением с ограничением по току (буферный режим);</li>
+							<li>Заряд стабилизированным током с ограничением по напряжению;</li>
+							<li>
+								Двухэтапный - заряд стабилизированным током, заряд стабилизированным напряжением «IU –
+								характеристика» (DIN 41 773);
+							</li>
+							<li>
+								Трехэтапный – основной заряд стабилизированным током, дозаряд стабилизированным
+								напряжением, переход в режим содержания – постоянной готовности к работе;
+							</li>
+							<li>
+								Поддерживающий заряд (компенсация тока саморазряда) для аккумуляторов, продолжительное
+								время не находящихся в эксплуатации;
+							</li>
+							<li>
+								Выравнивающий заряд (устранения различий в степени заряда банок в аккумуляторной
+								батарее);
+							</li>
+							<li>
+								Проведение контрольно-тренировочных циклов совместно с устройством тестирования
+								аккумуляторов УТАБ 6-48-65.- Десульфатация;
+							</li>
+							<li>Заряд постоянным током переменной полярности. – Десульфатация, восстановление АБ.</li>
+						</ul>
+					</article>
 				</section>
 			</main>
 			<footer class="footer">
@@ -368,7 +588,7 @@
 						<ul class="pages-list">
 							<li><a href="/index.html">Главная</a></li>
 							<li><a href="/products.html">Продукция</a></li>
-							<li><a href="/pages/articles.html">Статьи</a></li>
+							<li><a href="">Статьи</a></li>
 							<li><a href="">Контакты</a></li>
 						</ul>
 						<button class="to-top">
@@ -381,6 +601,9 @@
 			</footer>
 		</div>
 		<!-- JavaScript -->
+		<script src="/js/swiper-bundle.min.js"></script>
 		<script src="/js/burger.js" type="module"></script>
+		<script src="/js/item-swiper.js"></script>
+		<script src="/js/addColSpan.js"></script>
 	</body>
 </html>

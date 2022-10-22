@@ -124,10 +124,25 @@
                 }
             }
         }
+        thead.many {
+            tr {
+                padding-bottom: 10px;
+            }
+        }
         tbody {
             tr {
                 display: flex;
                 justify-content: space-between;
+            }
+            tr.current {
+                td {
+                    span {
+                        color: #ffffff;
+                        background-color: #8e8e8e;
+                        box-sizing: border-box;
+                        border: 1px solid #ffffff;
+                    }
+                }
             }
             td {
                 display: flex;
@@ -135,34 +150,63 @@
                 font-size: 16px;
                 line-height: 140%;
                 span {
-                    margin-right: 1px;
-                    padding: 12px 13px;
+                    margin-right: -1px;
+                    padding: 0;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    color: #ffffff;
-                    min-width: 56px;
-                    min-height: 46px;
+                    color: $color-black2;
+                    font-weight: 700;
+                    width: 56px;
+                    height: 46px;
                     text-transform: uppercase;
-                    background-color: #8e8e8e;
+                    border: 1px solid #000000;
                     &:last-child {
                         margin-right: 0;
                     }
                     @media (max-width: $width-pc) {
-                        padding: 9px 6px;
-                        min-width: 37px;
-                        min-height: 36px;
+                        width: 40px;
+                        height: 36px;
                         font-weight: 700;
                         font-size: 14px;
                         line-height: 18px;
                     }
                 }
             }
+            td:first-child(1) {
+                display: flex;
+                flex-wrap: wrap;
+            }
             td:nth-child(2) {
                 span {
-                    padding: 13px 18px;
+                    padding: 10px 0;
+                    width: 86px;
                     @media (max-width: $width-pc) {
-                        padding: 9px 9px;
+                        width: 78px;
+                    }
+                }
+            }
+        }
+        tbody.many {
+            tr.current {
+                border-width: 2px;
+            }
+            tr {
+                column-gap: 12px;
+
+                padding: 10px 0;
+                margin-bottom: -1px;
+                border-top: 1px solid $color-black;
+                border-bottom: 1px solid $color-black;
+                @media (max-width: $width-mobile) {
+                    padding: 12px 0;
+                }
+                td {
+                    flex-wrap: wrap;
+                    span {
+                        @media (max-width: $width-mobile) {
+                            margin-top: -1px;
+                        }
                     }
                 }
             }
@@ -335,6 +379,9 @@
                 line-height: 26px;
             }
         }
+    }
+    .table-two {
+        margin-bottom: 34px;
     }
     table + table + p {
         margin-bottom: 34px;

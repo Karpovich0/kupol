@@ -44,7 +44,7 @@ body {
         padding: 0 146px;
     }
     @media (max-width: $width-tablet-large) {
-        padding: 0 40px;
+        padding: 0 34px;
     }
     @media (max-width: $width-mobile) {
         padding: 0 15px;
@@ -240,6 +240,33 @@ section h2 {
     }
 }
 
+article ul {
+    padding-left: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 32px;
+    @media (max-width: $width-pc) {
+        line-height: 24px;
+    }
+    li {
+        display: flex;
+    }
+    li::before {
+        position: relative;
+        top: 13px;
+        left: 0;
+        padding: 0 2.5px;
+        display: block;
+        margin-right: 11px;
+        content: "";
+        position: relative;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #000000;
+    }
+}
+
 @import "header";
 @import "intro";
 @import "chargers";
@@ -252,3 +279,5 @@ section h2 {
 @import "products";
 @import "item";
 @import "item-two";
+@import "articles";
+@import "article";
