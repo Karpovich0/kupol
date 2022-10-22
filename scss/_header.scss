@@ -231,7 +231,6 @@
         background-color: transparent;
         margin-right: 9px;
         text-transform: uppercase;
-        font-family: $font-poppins;
         font-weight: 600;
         font-size: 16px;
         line-height: 140%;
@@ -326,6 +325,13 @@
     & nav > button {
         svg {
             stroke: $color-black;
+        }
+    }
+    .burger {
+        span,
+        &::before,
+        &::after {
+            background: $color-black;
         }
     }
 }

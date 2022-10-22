@@ -34,9 +34,17 @@ SWIPER_PREV.classList.add("swiper-arrow");
 SWIPER_NEXT.classList.add("swiper-arrow");
 BURGER.classList.add("burger-black");
 
+window.addEventListener("resize", function () {
+	changeColor();
+});
+
 swiper.on("slideChange", function () {
+	changeColor();
+});
+
+function changeColor() {
 	if (scrollY == 0) {
-		if (swiper.realIndex == 0) {
+		if (swiper.realIndex == 0 || window.innerWidth < 768) {
 			HEADER.classList.add("header-black");
 			BURGER.classList.add("burger-black");
 			SWIPER_PREV.classList.add("swiper-arrow");
@@ -48,16 +56,16 @@ swiper.on("slideChange", function () {
 			SWIPER_NEXT.classList.remove("swiper-arrow");
 		}
 	}
-});
+}
 
 window.addEventListener("scroll", function () {
-	if (scrollY > 34) {
+	if (scrollY > 0) {
 		HEADER.classList.add("header-visible");
 		HEADER.classList.add("header-black");
 		swiper.autoplay.stop();
 	} else {
 		HEADER.classList.remove("header-visible");
-		if (swiper.realIndex != 0) {
+		if (swiper.realIndex != 0 && window.innerWidth > 767) {
 			HEADER.classList.remove("header-black");
 		}
 		swiper.autoplay.start();
