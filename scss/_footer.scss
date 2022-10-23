@@ -138,6 +138,9 @@
             @media (max-width: $width-mobile) {
                 margin-right: 0;
             }
+            li:hover {
+                color: $color-pink-normal;
+            }
         }
     }
     nav > ul {

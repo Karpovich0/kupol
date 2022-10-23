@@ -211,9 +211,8 @@ section h2 {
     }
 }
 .body-burger {
-    @media (max-width: $width-pc) {
-        overflow: hidden;
-    }
+    overflow: hidden;
+    height: 100vh;
 }
 .breadcrumb {
     margin: 86px auto 16px;

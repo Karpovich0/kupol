@@ -39,6 +39,9 @@
             stroke: $color-pink-hover;
         }
     }
+    .cart-hidden {
+        display: none;
+    }
     .logo {
         & svg {
             display: none;

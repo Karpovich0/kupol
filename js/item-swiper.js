@@ -20,3 +20,15 @@ const swiper = new Swiper(".swiper-one", {
 		swiper: swiper2,
 	},
 });
+const swiper3 = new Swiper(".swiper-three", {
+	// arrows
+	navigation: {
+		prevEl: ".swiper-prev",
+		nextEl: ".swiper-next",
+	},
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+	grabCursor: true,
+});

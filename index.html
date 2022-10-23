@@ -17,6 +17,18 @@
 	</head>
 	<body>
 		<svg style="display: none">
+			<symbol id="cart-full">
+				<path
+					d="M4 4H5.5L5.8 6M17.5 12L16.5 15H7L5.8 6M5.8 6H11M17 4V6M17 6V8M17 6H19M17 6H15"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					fill="none"
+				/>
+				<circle cx="8" cy="19" r="2" stroke="none" />
+				<circle cx="15" cy="19" r="2" stroke="none" />
+				<circle cx="17" cy="6" r="3" fill="#EC5959" stroke="none" />
+			</symbol>
 			<symbol id="mail">
 				<g clip-path="url(#clip0_901_2737)">
 					<path
@@ -205,8 +217,11 @@
 						</div>
 					</div>
 					<a href="/pages/empty.html" class="cart">
-						<svg class="cart" width="24" height="24">
+						<svg class="cart cart-hidden" width="24" height="24">
 							<use xlink:href="#cart"></use>
+						</svg>
+						<svg class="cart" width="24" height="24">
+							<use xlink:href="#cart-full"></use>
 						</svg>
 						<span>корзина</span>
 					</a>
@@ -292,12 +307,12 @@
 					<h2>зарядные устройства для аккумуляторов</h2>
 					<ul>
 						<li>
-							<a href="">
+							<a href="/pages/126.html">
 								<img src="/src/chargers/12-6.jpg" alt="" class="image-link" />
 							</a>
 							<ul>
 								<li>
-									<a href="">
+									<a href="/pages/126.html">
 										<p>УЗПС 12-6</p>
 										<span>(15 В-6 А)</span>
 									</a>
@@ -310,7 +325,7 @@
 							</a>
 							<ul>
 								<li>
-									<a href="">
+									<a href="/pages/2425.html">
 										<p>УЗПС 24-25</p>
 										<span>(3-32 В, 1-25 А)</span>
 									</a>
@@ -318,12 +333,12 @@
 							</ul>
 						</li>
 						<li>
-							<a href="">
+							<a href="/pages/2440.html">
 								<img src="/src/chargers/24-40.jpg" alt="" class="image-link" />
 							</a>
 							<ul>
 								<li>
-									<a href="">
+									<a href="/pages/2440.html">
 										<p>УЗПС 24-40</p>
 										<span>(3-32 В, 1-40 А)</span>
 									</a>
@@ -343,12 +358,12 @@
 							</ul>
 						</li>
 						<li>
-							<a href="">
+							<a href="/pages/64865.html">
 								<img src="/src/chargers/48-65.jpg" alt="" class="image-link" />
 							</a>
 							<ul>
 								<li>
-									<a href="">
+									<a href="/pages/64865.html">
 										<p>УЗПС 48-65</p>
 										<span>(6-65 В, 3-65 А)</span>
 									</a>
@@ -484,7 +499,7 @@
 			<footer class="footer">
 				<div class="container">
 					<nav>
-						<a href="index.html">
+						<a href="/index.html">
 							<picture>
 								<source
 									media="(max-width:767px)"

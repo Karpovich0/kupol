@@ -17,6 +17,18 @@
 	</head>
 	<body>
 		<svg style="display: none">
+			<symbol id="cart-full">
+				<path
+					d="M4 4H5.5L5.8 6M17.5 12L16.5 15H7L5.8 6M5.8 6H11M17 4V6M17 6V8M17 6H19M17 6H15"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					fill="none"
+				/>
+				<circle cx="8" cy="19" r="2" stroke="none" />
+				<circle cx="15" cy="19" r="2" stroke="none" />
+				<circle cx="17" cy="6" r="3" fill="#EC5959" stroke="none" />
+			</symbol>
 			<symbol id="mail">
 				<g clip-path="url(#clip0_901_2737)">
 					<path
@@ -223,20 +235,56 @@
 				<span>Зарядное устройство для аккумуляторов</span>
 			</nav>
 			<main>
-				<section class="preview container">
+				<div class="slider-cover">
 					<div>
-						<div class="swiper swiper-one">
+						<div class="swiper swiper-three">
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide">
 									<img src="/src/2440/1.jpg" alt="" />
+									<button class="close"><img src="/src/close.svg" alt="" /></button>
 								</li>
 								<li class="swiper-slide">
 									<img src="/src/2440/2.jpg" alt="" />
+									<button class="close"><img src="/src/close.svg" alt="" /></button>
 								</li>
 								<li class="swiper-slide">
 									<img src="/src/2440/3.jpg" alt="" />
+									<button class="close"><img src="/src/close.svg" alt="" /></button>
 								</li>
 								<li class="swiper-slide">
+									<img src="/src/2440/4.jpg" alt="" />
+									<button class="close"><img src="/src/close.svg" alt="" /></button>
+								</li>
+							</ul>
+						</div>
+						<button class="close"><img src="/src/close.svg" alt="" /></button>
+						<button class="swiper-prev" type="button">
+							<svg width="64" height="64">
+								<use xlink:href="#arrow"></use>
+							</svg>
+						</button>
+						<button class="swiper-next" type="button">
+							<svg width="64" height="64">
+								<use xlink:href="#arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<section class="preview container">
+					<p class="item-title">УЗПС-24-40<span>Зарядное устройство для аккумуляторов</span></p>
+					<div>
+						<div class="swiper swiper-one">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide swiper-slide-one">
+									<img src="/src/2440/1.jpg" alt="" />
+								</li>
+								<li class="swiper-slide swiper-slide-one">
+									<img src="/src/2440/2.jpg" alt="" />
+								</li>
+								<li class="swiper-slide swiper-slide-one">
+									<img src="/src/2440/3.jpg" alt="" />
+								</li>
+								<li class="swiper-slide swiper-slide-one">
 									<img src="/src/2440/4.jpg" alt="" />
 								</li>
 							</ul>
@@ -611,5 +659,6 @@
 		<script src="/js/burger.js" type="module"></script>
 		<script src="/js/item-swiper.js"></script>
 		<script src="/js/addColSpan.js"></script>
+		<script src="/js/openBigSlider.js"></script>
 	</body>
 </html>
