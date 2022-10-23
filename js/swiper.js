@@ -94,10 +94,20 @@ BURGER.addEventListener("click", function () {
 	}
 	if (!isBurgerOpened) {
 		isBurgerOpened = true;
-	} else if (isBurgerOpened) {
-		if (swiper.realIndex == 0) {
-			BURGER.classList.add("burger-black");
+		if (window.innerWidth < 768) {
+			HEADER.classList.remove("header-black");
 		}
+	} else {
+		if (window.innerWidth < 768) {
+			BURGER.classList.add("burger-black");
+			HEADER.classList.add("header-black");
+		} else if (window.innerWidth > 767) {
+			if (swiper.realIndex == 0) {
+				BURGER.classList.remove("burger-black");
+				HEADER.classList.remove("header-black");
+			}
+		}
+
 		isBurgerOpened = false;
 	}
 });

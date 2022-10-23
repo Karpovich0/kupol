@@ -8,6 +8,8 @@
 		<!-- fonts -->
 		<link rel="stylesheet" href="/fonts/inter/inter.css" />
 		<link rel="stylesheet" href="/fonts/rubik-one/rubik-one.css" />
+		<!-- swiper -->
+		<link rel="stylesheet" href="/css/swiper-bundle.min.css" />
 		<!-- styles -->
 		<link rel="stylesheet" href="/css/normalize.css" />
 		<link rel="stylesheet" href="/css/drop-default-styles.css" />
@@ -136,12 +138,17 @@
 				/>
 				<path d="M78.6117 14.9013V0.848633H74.8342V18.6486H89V14.9013H78.6117Z" />
 			</symbol>
+			<symbol id="arrow">
+				<path
+					d="M29.1659 30.9999L38.3109 21.8549C38.792 21.3709 39.0621 20.7161 39.0621 20.0336C39.0621 19.3512 38.792 18.6964 38.3109 18.2124C38.0707 17.9703 37.785 17.7781 37.4702 17.6469C37.1554 17.5158 36.8177 17.4482 36.4767 17.4482C36.1357 17.4482 35.798 17.5158 35.4832 17.6469C35.1684 17.7781 34.8827 17.9703 34.6425 18.2124L23.6892 29.1657C23.4471 29.4059 23.2549 29.6916 23.1237 30.0064C22.9926 30.3212 22.925 30.6589 22.925 30.9999C22.925 31.3409 22.9926 31.6786 23.1237 31.9934C23.2549 32.3082 23.4471 32.5939 23.6892 32.8341L34.6425 43.9166C34.8839 44.156 35.1702 44.3454 35.4849 44.474C35.7997 44.6025 36.1367 44.6677 36.4767 44.6657C36.8167 44.6677 37.1537 44.6025 37.4685 44.474C37.7832 44.3454 38.0695 44.156 38.3109 43.9166C38.792 43.4325 39.0621 42.7778 39.0621 42.0953C39.0621 41.4128 38.792 40.7581 38.3109 40.2741L29.1659 30.9999Z"
+				/>
+			</symbol>
 		</svg>
 		<div>
 			<header class="header header-black header-visible">
 				<nav class="container">
 					<button type="button" class="burger burger-black"><span></span></button>
-					<a href="index.html" class="logo">
+					<a href="/index.html" class="logo">
 						<svg width="171" height="42">
 							<use xlink:href="#logo"></use>
 						</svg>
@@ -154,8 +161,8 @@
 					</a>
 					<ul class="pages-list">
 						<li><a href="/index.html">Главная</a></li>
-						<li><a href="/products.html">Продукция</a></li>
-						<li><a class="current">Статьи</a></li>
+						<li><a class="current">Продукция</a></li>
+						<li><a href="/pages/articles.html">Статьи</a></li>
 						<li><a href="/pages/contacts.html">Контакты</a></li>
 					</ul>
 					<a class="icon-link" href="tel:+380504412311">
@@ -205,111 +212,220 @@
 					</a>
 				</nav>
 			</header>
+			<nav class="breadcrumb container">
+				<ul>
+					<li>
+						<a href="/index.html"><img src="/src/general/home.svg" alt="" width="24" height="24" /></a>
+					</li>
+					<li><a href="/products.html">продукция</a></li>
+					<li>УТАБ 6-48/65 <span>Устройство тестирования аккумуляторов</span></li>
+				</ul>
+				<span>Устройство тестирования аккумуляторов</span>
+			</nav>
 			<main>
-				<nav class="breadcrumb container">
-					<ul>
-						<li>
-							<a href="/index.html"><img src="/src/general/home.svg" alt="" width="24" height="24" /></a>
-						</li>
-						<li>Статьи</li>
-					</ul>
-				</nav>
-				<section class="articles container">
+				<section class="preview container">
 					<div>
-						<h2>Статьи</h2>
+						<div class="swiper swiper-one">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<img src="/src/2440/1.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/2.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/3.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/4.jpg" alt="" />
+								</li>
+							</ul>
+							<button class="swiper-prev" type="button">
+								<svg width="64" height="64">
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</button>
+							<button class="swiper-next" type="button">
+								<svg width="64" height="64">
+									<use xlink:href="#arrow"></use>
+								</svg>
+							</button>
+						</div>
+						<div thumbsSlider="" class="swiper swiper-two">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<img src="/src/2440/1.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/2.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/3.jpg" alt="" />
+								</li>
+								<li class="swiper-slide">
+									<img src="/src/2440/4.jpg" alt="" />
+								</li>
+							</ul>
+						</div>
+						<div class="swiper-pagination-wrapper">
+							<div class="swiper-pagination"></div>
+						</div>
 					</div>
-					<ul>
-						<li>
-							<article>
-								<a href="/pages//article1.html">
-									<img src="/src/page-articles/1.jpg" alt="" />
-								</a>
-								<div>
-									<a href="/pages//article1.html">
-										<h3>С какими аккумуляторами совместимы зарядные устройства</h3>
+					<div>
+						<h2>УТАБ 6-48/65 <span>Устройство тестирования аккумуляторов</span></h2>
+						<table>
+							<thead class="many">
+								<tr>
+									<th>Заряжает аккумуляторы:</th>
+									<th>Ток заряда:</th>
+								</tr>
+							</thead>
+							<tbody class="many">
+								<tr class="current">
+									<td>
+										<span>6 b</span><span>12 b</span><span>24 b</span><span>36 b</span
+										><span>48 b</span><span>60 b</span>
+									</td>
+									<td><span>3-65 A</span></td>
+								</tr>
+							</tbody>
+						</table>
+						<div>
+							<div>24 000 <span>грн</span></div>
+							<a href="" class="button"><span>добавить</span> в корзину</a>
+						</div>
+						<div>
+							<span>Написать<br />менеджеру:</span>
+							<ul class="contact-list">
+								<li>
+									<a href="">
+										<svg width="24" height="17">
+											<use xlink:href="#mail"></use>
+										</svg>
 									</a>
-									<p>
-										Зарядные устройства серии УЗПС предназначены для автоматического заряда и
-										подзаряда свинцово-кислотных, щелочных, гелевых и литий-железо-фосфатных
-										(LiFePo4) аккумуляторных батарей с номинальным...
-									</p>
-									<time datetime="2022-06-20 00:00">20 июня 2022</time>
-								</div>
-							</article>
-						</li>
-						<li>
-							<article>
-								<a href="/pages//article1.html">
-									<img src="/src/page-articles/2.jpg" alt="" />
-								</a>
-								<div>
-									<a href="/pages//article1.html">
-										<h3>С какими аккумуляторами совместимы зарядные устройства</h3>
+								</li>
+								<li>
+									<a href="">
+										<svg width="22" height="19">
+											<use xlink:href="#telegram"></use>
+										</svg>
 									</a>
-									<p>
-										Зарядные устройства серии УЗПС предназначены для автоматического заряда и
-										подзаряда свинцово-кислотных, щелочных, гелевых и литий-железо-фосфатных
-										(LiFePo4) аккумуляторных батарей с номинальным...
-									</p>
-									<time datetime="2022-06-20 00:00">20 июня 2022</time>
-								</div>
-							</article>
-						</li>
-						<li>
-							<article>
-								<a href="/pages//article1.html">
-									<img src="/src/page-articles/1.jpg" alt="" />
-								</a>
-								<div>
-									<a href="/pages//article1.html">
-										<h3>С какими аккумуляторами совместимы зарядные устройства</h3>
+								</li>
+								<li>
+									<a href="">
+										<svg width="22" height="23">
+											<use xlink:href="#viber"></use>
+										</svg>
 									</a>
-									<p>
-										Зарядные устройства серии УЗПС предназначены для автоматического заряда и
-										подзаряда свинцово-кислотных, щелочных, гелевых и литий-железо-фосфатных
-										(LiFePo4) аккумуляторных батарей с номинальным...
-									</p>
-									<time datetime="2022-06-20 00:00">20 июня 2022</time>
-								</div>
-							</article>
-						</li>
-						<li>
-							<article>
-								<a href="/pages//article1.html">
-									<img src="/src/page-articles/2.jpg" alt="" />
-								</a>
-								<div>
-									<a href="/pages//article1.html">
-										<h3>С какими аккумуляторами совместимы зарядные устройства</h3>
-									</a>
-									<p>
-										Зарядные устройства серии УЗПС предназначены для автоматического заряда и
-										подзаряда свинцово-кислотных, щелочных, гелевых и литий-железо-фосфатных
-										(LiFePo4) аккумуляторных батарей с номинальным...
-									</p>
-									<time datetime="2022-06-20 00:00">20 июня 2022</time>
-								</div>
-							</article>
-						</li>
-						<li>
-							<article>
-								<a href="/pages//article1.html">
-									<img src="/src/page-articles/1.jpg" alt="" />
-								</a>
-								<div>
-									<a href="/pages//article1.html">
-										<h3>С какими аккумуляторами совместимы зарядные устройства</h3>
-									</a>
-									<p>
-										Зарядные устройства серии УЗПС предназначены для автоматического заряда и
-										подзаряда свинцово-кислотных, щелочных, гелевых и литий-железо-фосфатных
-										(LiFePo4) аккумуляторных батарей с номинальным...
-									</p>
-									<time datetime="2022-06-20 00:00">20 июня 2022</time>
-								</div>
-							</article>
-						</li>
-					</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="specs container">
+					<h2>характеристики</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Наименование параметра</th>
+								<th>Значение параметра</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Наименование параметра</td>
+								<td>220 Вольт, ~ 50 Гц.</td>
+							</tr>
+							<tr>
+								<td>Диапазон питающего напряжения</td>
+								<td>от 175 до 264 Вольт</td>
+							</tr>
+							<tr class="single">
+								<td>Максимальное входное напряжение от АБ</td>
+								<td>65 Вольт</td>
+							</tr>
+							<tr>
+								<td colspan="2">Максимальный ток разряда:</td>
+							</tr>
+							<tr>
+								<td>для АБ с напряжением 24, 36 и 48 Вольт</td>
+								<td>65 Ампер</td>
+							</tr>
+							<tr>
+								<td>для АБ с напряжением 12 Вольт</td>
+								<td>55 Ампер</td>
+							</tr>
+							<tr>
+								<td>для АБ с напряжением 6 Вольт</td>
+								<td>30 Ампер</td>
+							</tr>
+							<tr>
+								<td>для АБ с напряжением 6 Вольт</td>
+								<td>1,0 Ампер</td>
+							</tr>
+							<tr>
+								<td>Максимальная мощность разряда</td>
+								<td>4 000 Вт</td>
+							</tr>
+							<tr>
+								<td>Дискретность уставки тока разряда</td>
+								<td>0,1 Ампер</td>
+							</tr>
+							<tr>
+								<td>Дискретность уставки конечного напряжения разряда</td>
+								<td>0,1 Вольт</td>
+							</tr>
+							<tr>
+								<td>Дискретность уставки мощности разряда</td>
+								<td>10 Ватт</td>
+							</tr>
+							<tr>
+								<td>Интерфейс для связи с ПК</td>
+								<td>USB</td>
+							</tr>
+							<tr>
+								<td>Степень защиты по ГОСТ 14254</td>
+								<td>IP20</td>
+							</tr>
+							<tr>
+								<td>Габариты (Ш×В×Г)</td>
+								<td>225×460×400 мм</td>
+							</tr>
+							<tr>
+								<td>Вес, не более</td>
+								<td>11 кг</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>
+						«Устройство тестирования аккумуляторных батарей УТАБ 6-48/65» предназначено для проведения
+						автоматического тестирования аккумуляторных батарей (АБ) с номинальным напряжением 6, 12, 24, 36
+						и 48 Вольт, с целью определения их фактической ёмкости и оценки технического состояния АБ.
+						Устройство позволяет определить такие технические характеристики батареи, как «внутренне
+						сопротивление» и «ток короткого замыкания». Тестирование по ёмкости производится методом
+						контрольного разряда АБ стабилизированным током или стабилизированной мощностью до
+						установленного конечного напряжения.
+					</p>
+					<div class="image-row">
+						<img src="/src/64865/1-2.png" alt="" />
+					</div>
+					<p>
+						Производится автоматическое формирование «Протокола цикла разряда», с последующим выводом на ПК.
+					</p>
+					<div class="image-row">
+						<img src="/src/64865/3.jpg" alt="" /><img src="/src/64865/4.jpg" alt="" />
+					</div>
+					<article>
+						<h3>С помощью программного обеспечения, входящего в комплект поставки, имеется возможность:</h3>
+						<ul>
+							<li>Считать из памяти устройства на персональный компьютер формуляры циклов разряда;</li>
+							<li>
+								Посмотреть графики разрядной характеристики (изменения напряжения и тока в процессе
+								разряда);
+							</li>
+							<li>Автоматически сформировать «Протокол контрольного цикла разряда».</li>
+						</ul>
+					</article>
 				</section>
 			</main>
 			<footer class="footer">
@@ -379,8 +495,8 @@
 						</div>
 						<ul class="pages-list">
 							<li><a href="/index.html">Главная</a></li>
-							<li><a href="/products.html">Продукция</a></li>
-							<li><a class="current">Статьи</a></li>
+							<li><a class="current">Продукция</a></li>
+							<li><a href="/pages/articles.html">Статьи</a></li>
 							<li><a href="/pages/contacts.html">Контакты</a></li>
 						</ul>
 						<button class="to-top">
@@ -393,6 +509,9 @@
 			</footer>
 		</div>
 		<!-- JavaScript -->
+		<script src="/js/swiper-bundle.min.js"></script>
 		<script src="/js/burger.js" type="module"></script>
+		<script src="/js/item-swiper.js"></script>
+		<script src="/js/addColSpan.js"></script>
 	</body>
 </html>
