@@ -3254,7 +3254,7 @@ article ul li::before {
 }
 
 .slider-cover {
-  position: absolute;
+  position: fixed;
   padding: 14px 125px;
   top: 0;
   left: 0;
@@ -3298,6 +3298,10 @@ article ul li::before {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.slider-cover .swiper-three li {
+  padding: 0 30px;
 }
 
 .slider-cover .swiper-three img {
@@ -3363,7 +3367,7 @@ article ul li::before {
 .slider-cover .close {
   position: relative;
   top: -100%;
-  right: -97%;
+  right: -99%;
   width: 36px;
   height: 36px;
   background-color: transparent;
